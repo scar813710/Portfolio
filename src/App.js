@@ -8,22 +8,28 @@ import Experience from "./components/Main/Experience";
 import Education from "./components/Main/Education";
 import Projects from "./components/Main/Projects";
 import Skills from "./components/Main/Skills";
-import Testerminal from "./components/Main/Testerminal";
+import Testimonial from "./components/Main/Testimonial";
 import Contact from "./components/Main/Contact";
+import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/Common/ScrollToTopButton";
 
 function App() {
   return (
     <div className="max-w-[1440px] mx-auto">
-      <div className="App mt-10 border rounded-[30px] mx-10 bg-white bg-opacity-10">
+      <div className="App mt-10 border rounded-[30px] bg-white bg-opacity-10 mx-10 ">
         <Header />
-        <Home />
-        <About />
-        <Experience />
-        <Education />
-        <Projects />
-        <Skills />
-        <Testerminal />
+        <div className="px-14">
+          <Home />
+          <About />
+          <Experience />
+          <Education />
+          <Projects />
+          <Skills />
+          <Testimonial />
+        </div>
         <Contact />
+        <Footer />
+        <ScrollToTopButton />
       </div>
     </div>
   );

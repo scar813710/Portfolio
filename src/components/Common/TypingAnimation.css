@@ -1,0 +1,7 @@
+.TypingAnimation {
+    font-family: monospace;
+  }
+  
+  .TypingAnimation p {
+    white-space: pre;
+  }

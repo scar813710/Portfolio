@@ -1,0 +1,34 @@
+.animate {
+    animation: incrementNumber 0.5s linear forwards;
+  }
+  
+  @keyframes incrementNumber {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-number {
+    animation: incrementNumber2 1.5s linear forwards;
+  }
+  
+  @keyframes incrementNumber2 {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .digit {
+    font-size: 28px;
+    font-weight: bold;
+  }
