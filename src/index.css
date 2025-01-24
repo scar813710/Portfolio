@@ -33,6 +33,7 @@ h2 {
   color: #dedede;
   margin: 60px auto;
   font-family: "Montserrat", sans-serif;
+  padding-top: 96px;
 }
 
 ::-webkit-scrollbar {

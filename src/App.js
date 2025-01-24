@@ -12,13 +12,29 @@ import Testimonial from "./components/Main/Testimonial";
 import Contact from "./components/Main/Contact";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/Common/ScrollToTopButton";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        setIsScrolled(isScrolled);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+  
   return (
     <div className="max-w-[1440px] mx-auto">
       <div className="App mt-10 border rounded-[30px] bg-white bg-opacity-10 mx-10 ">
         <Header />
-        <div className="px-14">
+        <div className= {`px-14`}>
           <Home />
           <About />
           <Experience />

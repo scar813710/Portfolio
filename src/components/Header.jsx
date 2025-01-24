@@ -18,49 +18,49 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="w-fit flex justify-center text-center">
+    <div className="text-center">
       <nav
         className={`flex justify-between items-center py-6 px-14  text-white border-b border-[#ffffff54] transition duration-500 ${
           isScrolled
-            ? "fixed top-0 left-0 right-0 bg-white bg-opacity-20 shadow-md mx-10 max-w-[1358px]"
+            ? "fixed top-0 left-0 right-0 bg-white bg-opacity-30  shadow-md 2xl:mx-auto mx-10 max-w-[1358px]"
             : "relative bg-transparent"
         }`}
       >
         <a href="" className="text-white font-extrabold text-[32px]">
           <span className="text-[#c55648]"> Rodolfo </span> Guerrero
         </a>
-        <ul className="flex text-white gap-4 font-normal text-[16px]">
-          <li>
+        <ul className="flex text-white gap-4 font-normal text-[16px] ">
+          <li className="cursor-pointer">
             <Link to="home" spy={true} smooth={true} duration={500}>
               Home
             </Link>
           </li>
-          <li>
+          <li className="cursor-pointer">
             <Link to="about" spy={true} smooth={true} duration={500}>
               About Me
             </Link>
           </li>
-          <li>
+          <li className="cursor-pointer">
             <Link to="experience" spy={true} smooth={true} duration={500}>
               Experience
             </Link>
           </li>
-          <li>
+          <li className="cursor-pointer">
             <Link to="project" spy={true} smooth={true} duration={500}>
               Project
             </Link>
           </li>
-          <li>
+          <li className="cursor-pointer">
             <Link to="skills" spy={true} smooth={true} duration={500}>
               Skills
             </Link>
           </li>
-          <li>
+          <li className="cursor-pointer">
             <Link to="testimonial" spy={true} smooth={true} duration={500}>
               Testimonial
             </Link>
           </li>
-          <li>
+          <li className="cursor-pointer">
             <Link to="contact" spy={true} smooth={true} duration={500}>
               Contact
             </Link>
