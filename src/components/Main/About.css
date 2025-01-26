@@ -1,0 +1,17 @@
+.aboutImg {
+    animation: pop;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pop {
+  0% {
+    top: 0px;
+  }
+  40% {
+    top: 30px;
+  }
+  100% {
+    top: 0px;
+  }
+}

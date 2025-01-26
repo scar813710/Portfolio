@@ -1,21 +1,11 @@
 .experience-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    border: 2px solid white;
-    background-color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    transform: translateX(-50%);
-}
-.experience-card::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    border: 1px solid white;
-    width: 5%;
-    height: 1px;
-    border-radius: 10px;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 2px solid white;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  transform: translateX(-50%);
 }

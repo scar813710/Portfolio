@@ -22,7 +22,7 @@ const Header = () => {
       <nav
         className={`flex justify-between items-center py-6 px-14  text-white border-b border-[#ffffff54] transition duration-500 ${
           isScrolled
-            ? "fixed top-0 left-0 right-0 bg-white bg-opacity-30  shadow-md 2xl:mx-auto mx-10 max-w-[1358px]"
+            ? "fixed top-0 left-0 right-0 bg-white bg-opacity-30  shadow-md 2xl:mx-auto mx-10 max-w-[1358px] z-50"
             : "relative bg-transparent"
         }`}
       >

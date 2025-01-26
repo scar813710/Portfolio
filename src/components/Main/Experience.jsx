@@ -41,7 +41,7 @@ const Experience = () => {
             >
               <div
                 className={`text-black p-6 ${
-                  index % 2 == 0 ? `ml-6` : `mr-6`
+                  index % 2 == 0 ? `ml-10` : `mr-6`
                 } mx-auto border-white border rounded-md hover:bg-white hover:bg-opacity-30 duration-300 w-[40%] `}
               >
                 <h3 className="font-bold text-white">{experience.role}</h3>

@@ -102,7 +102,7 @@ const Home = () => {
     <div className="mb-5" id="home">
       <div className="text-white grid grid-cols-2 h-[600px]">
         <div className="w-full flex items-center justify-center">
-          <img src="./avatar.jpg" alt="" className="rounded-[50%] w-[50%]" />
+          <img src="./avatar1.jpg" alt="" className="rounded-[50%] w-[50%]" />
         </div>
         <div className="my-auto">
           <h1 className="text-4xl ml-0 text-left">

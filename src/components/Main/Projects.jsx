@@ -146,7 +146,7 @@ const Projects = () => {
       <div className="grid grid-cols-2 gap-8">
         {project.map((project, index) => (
           <div key={index} className="hover:shadow-2xl duration-300 shadow-black rounded-md hover:transform hover:">
-            <img src={project.image} alt="" className=""/>
+            <img src={project.image} alt="project" className=""/>
           </div>
         ))}
       </div>

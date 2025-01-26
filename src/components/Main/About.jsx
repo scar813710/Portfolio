@@ -1,10 +1,11 @@
 import React from "react";
+import "./About.css"
 
 const About = () => {
   return (
     <div className="my-10" id="about">
       <h2 className="ml-0 text-left">About me</h2>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 relative">
         <div className="text-[#dedede] py-6">
           <p className="text-left pb-10 border-b border-[#e6e6e693]">
             I am a Full Stack Developer with over 10 years of experience,
@@ -39,8 +40,8 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="">
-          <img src="./about.svg" alt="" className="mx-auto w-[70%]"/>
+        <div className="absolute right-0 aboutImg">
+          <img src="./about.svg" alt="" className="mx-auto w-[70%] "/>
         </div>
       </div>
     </div>

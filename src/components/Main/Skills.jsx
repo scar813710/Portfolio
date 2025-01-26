@@ -72,7 +72,7 @@ const Skills = () => {
       <p className="pl-6 text-left text-[#daff53e1] text-[18px]">Passionately diving deep into tech crafting perfect products with finesse - NOT just listing.</p>
       <div className="pl-6 py-6  flex flex-wrap">
         {skills.map((skill, index) => (
-          <div key={index} className="m-2 w-fit flex items-center gap-2 p-2 border border-[#dbdbdb8a] rounded-lg bg-white bg-opacity-15 hover:bg-opacity-40 duration-300">
+          <div key={index} className="m-2 w-fit flex items-center gap-2 p-2 border border-[#dbdbdb8a] rounded-lg bg-white bg-opacity-15 hover:bg-opacity-40 duration-300 cursor-pointer">
             <img src={skill.image} alt={skill.name} width={35} height={25} />
             <p className="text-white w-fit">{skill.name}</p>
           </div>
