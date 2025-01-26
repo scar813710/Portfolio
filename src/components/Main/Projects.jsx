@@ -1,152 +1,95 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Project.css";
 
-const project = [
+const projects = [
   {
-    image: "./projects/portfolio-buoyfi-1.jpg",
+    image: "./projects/digital-marketing-business-website/hero-section.gif",
     url: "",
     github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
+    title: "Digital Marketing Business Website",
+    description: "A business website for digital marketing solutions.",
+    skills: ["React", "CSS", "JavaScript"],
+    bg_color: "bg-purple-400",
   },
   {
-    image: "./projects/portfolio-covid-1.jpg",
+    image: "./projects/cake-shop/hero-section.png",
     url: "",
     github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
+    title: "Cake Shop",
+    description: "An online shop for delicious cakes.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    bg_color: "bg-pink-400",
   },
   {
-    image: "./projects/portfolio-tango-1.jpg",
+    image: "./projects/game/hero-section.png",
     url: "",
     github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
+    title: "Game Project",
+    description: "An engaging game built with React.",
+    skills: ["Unity", "C#", "JavaScript"],
+    bg_color: "bg-blue-400",
   },
   {
-    image: "./projects/portfolio-virusgeeks-1.jpg",
+    image: "./projects/Web-developement-website/hero-section.jpg",
     url: "",
     github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
+    title: "Web Development Website",
+    description: "A portfolio site showcasing web development skills.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    bg_color: "bg-purple-200",
   },
   {
-    image: "./projects/portfolio-samsara-1.jpg",
+    image: "./projects/Real-estate/hero-section.png",
     url: "",
     github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
+    title: "Real Estate Agency",
+    description: "A real estate agency website to showcase properties.",
+    skills: ["React", "Node.js", "MongoDB"],
+    bg_color: "bg-white",
   },
   {
-    image: "./projects/portfolio-barber-1.jpg",
+    image: "./projects/Automatic-medical-billing/hero-section.jpg",
     url: "",
     github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
+    title: "Real Estate Agency",
+    description: "A real estate agency website to showcase properties.",
+    skills: ["React", "Node.js", "MongoDB"],
+    bg_color: "bg-white",
   },
-  {
-    image: "./projects/portfolio-beach-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-foobee-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-gas-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-inseller-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-ivp-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-kw-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-lion-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-luko-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-mused-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-network-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-  {
-    image: "./projects/portfolio-offerup-1.jpg",
-    url: "",
-    github: "",
-    title: "",
-    description : "",
-    skills : ["","","",]
-  },
-]
+];
 
 const Projects = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <div id="project">
-      <h2 className="text-right">My Portfolio</h2>
+      <h2 className="text-right">Projects</h2>
       <div className="grid grid-cols-2 gap-8">
-        {project.map((project, index) => (
-          <div key={index} className="hover:shadow-2xl duration-300 shadow-black rounded-md hover:transform hover:">
-            <img src={project.image} alt="project" className=""/>
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="hover:shadow-2xl duration-300 shadow-black rounded-md h-[350px] overflow-hidden relative cursor-pointer"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img
+              src={project.image}
+              alt="project"
+              className="w-full h-full object-cover"
+            />
+            {hoveredIndex === index && (
+              <div
+                className={`${project.bg_color} hover-panel rounded-md w-full h-full absolute bottom-0 bg-opacity-70 flex flex-col justify-center items-center text-center p-4`}
+              ></div>
+            )}
           </div>
         ))}
       </div>
@@ -155,3 +98,8 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+// ${
+//   index % 2 !== 0 ? "bg-red-400" : "bg-blue-400"
+// } 

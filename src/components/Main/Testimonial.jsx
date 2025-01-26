@@ -39,7 +39,7 @@ const Testimonial = () => {
                 {testimonial.name}
               </h3>
             </div>
-            <p className="italic py-3">{testimonial.company}</p>
+            <p className="italic py-3 text-[#ffbd90]">{testimonial.company}</p>
             <p>{testimonial.description}</p>
           </div>
         ))}
