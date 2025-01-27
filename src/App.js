@@ -1,6 +1,4 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Main/Home";
 import About from "./components/Main/About";
@@ -15,25 +13,26 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const isScrolled = window.scrollY > 0;
-        setIsScrolled(isScrolled);
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
-  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(isScrolled);
+      const isScrolled = window.scrollY > 0;
+      setIsScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="max-w-[1440px] mx-auto">
       <div className="App my-10 border rounded-[30px] bg-white bg-opacity-10 sm:mx-10 mx-2">
         <Header />
-        <div className= {`md:px-14 px-7`}>
+        <div className={`md:px-14 px-7`}>
           <Home />
           <About />
           <Experience />

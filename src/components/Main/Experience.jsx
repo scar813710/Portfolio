@@ -60,7 +60,7 @@ const Experience = () => {
               key={index}
               className={`${
                 index !== 0 && "-mt-[150px]"
-              } mb-6 w-[90%] pt-5 relative experience-card ${index % 2 == 0 && ""}`}
+              } mb-6 w-[90%] pt-5 relative experience-card ${index % 2 === 0 && ""}`}
             >
               <div
                 className={`relative text-black p-6 ${
