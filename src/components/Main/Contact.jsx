@@ -105,7 +105,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="text-right flex justify-end">
-          <img src="/map3.svg" alt="map" className="mr-0 opacity-60" />
+          <img src="/map2.svg" alt="map" className="mr-0 opacity-60" />
         </div>
       </div>
     </div>

@@ -20,9 +20,9 @@ const Header = () => {
   return (
     <div className="text-center">
       <nav
-        className={`flex justify-between items-center py-6 px-14  text-white border-b border-[#ffffff54] transition duration-500 ${
+        className={`flex justify-between items-center py-6 lg:px-14 px-7 text-white border-b border-[#ffffff54] transition duration-500 ${
           isScrolled
-            ? "fixed top-0 left-0 right-0 bg-white bg-opacity-30  shadow-md 2xl:mx-auto mx-10 max-w-[1358px] z-50"
+            ? "fixed top-0 left-0 right-0 bg-white bg-opacity-30  shadow-md 2xl:mx-auto lg:mx-10 mx-2 max-w-[1358px] z-50"
             : "relative bg-transparent"
         }`}
       >

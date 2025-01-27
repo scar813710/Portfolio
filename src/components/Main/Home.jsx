@@ -100,7 +100,7 @@ const Home = () => {
 
   return (
     <div className="mb-5" id="home">
-      <div className="text-white grid grid-cols-2 h-[600px]">
+      <div className="text-white grid lg:grid-cols-2 grid-cols-1 h-[600px]">
         <div className="w-full flex items-center justify-center">
           <img src="./avatar1.jpg" alt="" className="rounded-[50%] w-[50%]" />
         </div>
@@ -109,9 +109,9 @@ const Home = () => {
             Who am I and <br />
             What I 'm great at?
           </h1>
-          <p className="text-left py-3 text-[18px] text-[#dedede]">
-            I am <span className="text-[#c55648]">{fullText}</span>{" "}
-            {showCaret && <span className="caret">|</span>}{" "}
+          <p className="text-left py-3 text-[18px] text-[#dedede] flex sm:flex-row  flex-col">
+            <span>I am</span> &nbsp; <span className="text-[#c55648]">{fullText} {showCaret && <span className="caret text-white">|</span>}</span>
+            
           </p>
           <p className="text-left py-3 text-[18px] text-[#dedede]">
             I am very passionate about web development. <br />
@@ -119,7 +119,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="mb-32 bg-white bg-opacity-30 rounded-md text flex justify-around py-6 px-6">
+      <div className="mb-32 bg-white bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2  gap-8 py-6 px-6">
         {data.map((item, index) => {
           return (
             <div key={index}>

@@ -12,15 +12,6 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "./projects/cake-shop/hero-section.png",
-    url: "",
-    github: "",
-    title: "Cake Shop",
-    description: "An online shop for delicious cakes.",
-    skills: ["HTML", "CSS", "JavaScript"],
-    bg_color: "bg-pink-400",
-  },
-  {
     image: "./projects/game/hero-section.png",
     url: "",
     github: "",
@@ -36,7 +27,16 @@ const projects = [
     title: "Web Development Website",
     description: "A portfolio site showcasing web development skills.",
     skills: ["HTML", "CSS", "JavaScript"],
-    bg_color: "bg-purple-200",
+    bg_color: "bg-purple-800",
+  },
+  {
+    image: "./projects/cake-shop/hero-section.png",
+    url: "",
+    github: "",
+    title: "Cake Shop",
+    description: "An online shop for delicious cakes.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    bg_color: "bg-pink-300",
   },
   {
     image: "./projects/Real-estate/hero-section.png",
@@ -45,7 +45,7 @@ const projects = [
     title: "Real Estate Agency",
     description: "A real estate agency website to showcase properties.",
     skills: ["React", "Node.js", "MongoDB"],
-    bg_color: "bg-white",
+    bg_color: "bg-orange-800",
   },
   {
     image: "./projects/Automatic-medical-billing/hero-section.jpg",
@@ -54,7 +54,25 @@ const projects = [
     title: "Real Estate Agency",
     description: "A real estate agency website to showcase properties.",
     skills: ["React", "Node.js", "MongoDB"],
-    bg_color: "bg-white",
+    bg_color: "bg-purple-400",
+  },
+  {
+    image: "./projects/project-management-system/hero-section.jpg",
+    url: "",
+    github: "",
+    title: "Web Development Website",
+    description: "A portfolio site showcasing web development skills.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    bg_color: "bg-purple-400",
+  },
+  {
+    image: "./projects/Agency-website/hero-section.jpg",
+    url: "",
+    github: "",
+    title: "Web Development Website",
+    description: "A portfolio site showcasing web development skills.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    bg_color: "bg-red-800",
   },
 ];
 
@@ -72,34 +90,46 @@ const Projects = () => {
   return (
     <div id="project">
       <h2 className="text-right">Projects</h2>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="hover:shadow-2xl duration-300 shadow-black rounded-md h-[350px] overflow-hidden relative cursor-pointer"
+            className="hover:shadow-2xl duration-300 shadow-black rounded-md overflow-hidden relative cursor-pointer"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
             <img
               src={project.image}
               alt="project"
-              className="w-full h-full object-cover"
+              className="w-full aspect-[8/5] object-cover"
             />
             {hoveredIndex === index && (
               <div
                 className={`${project.bg_color} hover-panel rounded-md w-full h-full absolute bottom-0 bg-opacity-70 flex flex-col justify-center items-center text-center p-4`}
-              ></div>
+              >
+                <a className="border p-2 rounded-full hover:bg-white hover:bg-opacity-55 duration-200">
+                  {" "}
+                  <img
+                    src="./search-icon.svg"
+                    width={25}
+                    height={25}
+                    alt="icon"
+                  />
+                </a>
+              </div>
             )}
           </div>
         ))}
       </div>
+      <button className="mt-7 rounded-[10%] duration-300 p-4 border text-white bg-white bg-opacity-15 hover:bg-opacity-35">
+        Read More
+      </button>
     </div>
   );
 };
 
 export default Projects;
 
-
 // ${
 //   index % 2 !== 0 ? "bg-red-400" : "bg-blue-400"
-// } 
+// }

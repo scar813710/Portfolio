@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Home from "./components/Main/Home";
 import About from "./components/Main/About";
 import Experience from "./components/Main/Experience";
-import Education from "./components/Main/Education";
 import Projects from "./components/Main/Projects";
 import Skills from "./components/Main/Skills";
 import Testimonial from "./components/Main/Testimonial";
@@ -32,13 +31,12 @@ function App() {
   
   return (
     <div className="max-w-[1440px] mx-auto">
-      <div className="App mt-10 border rounded-[30px] bg-white bg-opacity-10 mx-10 ">
+      <div className="App my-10 border rounded-[30px] bg-white bg-opacity-10 sm:mx-10 mx-2">
         <Header />
-        <div className= {`px-14`}>
+        <div className= {`md:px-14 px-7`}>
           <Home />
           <About />
           <Experience />
-          <Education />
           <Projects />
           <Skills />
           <Testimonial />

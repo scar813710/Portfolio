@@ -1,11 +1,30 @@
 .experience-card::after {
   content: "";
   position: absolute;
-  top: 0;
-  border: 2px solid white;
-  background-color: white;
-  width: 20px;
-  height: 20px;
+  top: 24.5px;
+  background-color: rgb(255, 51, 0);
+  width: 9px;
+  height: 9px;
   border-radius: 10px;
   transform: translateX(-50%);
+}
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  background-color: rgba(158, 72, 72, 0.795);
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+
+.content-left::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+}
+
+.timeline {
+  background: linear-gradient(to bottom, #ff5252, yellow, #ffffff);
 }
