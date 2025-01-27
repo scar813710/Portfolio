@@ -44,28 +44,41 @@ const Home = () => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    data.forEach((item, index) => {
+    const intervals = []; // Array to hold interval IDs for cleanup
+
+    data.forEach((item, idx) => {
       const endValue = item.number;
       const duration = 1500; // duration of the animation in ms
       const stepTime = Math.floor(duration / endValue);
 
       let currentValue = 0;
-      const interval = setInterval(() => {
+
+      const intervalId = setInterval(() => {
         if (currentValue < endValue) {
-          if (endValue > 10000) currentValue = currentValue + 101;
-          else if (endValue > 100) currentValue = currentValue + 5;
-          else currentValue++;
+          currentValue = endValue > 10000
+            ? currentValue + 101
+            : endValue > 100
+              ? currentValue + 5
+              : currentValue + 1;
+
           setData((prevData) => {
-            const newData = [...prevData];
-            newData[index].current = currentValue; // Update current value
+            const newData = [...prevData]; // Avoid mutating state directly
+            newData[idx].current = currentValue;
             return newData;
           });
         } else {
-          clearInterval(interval);
+          clearInterval(intervalId);
         }
       }, stepTime);
+
+      intervals.push(intervalId); // Store the interval ID for cleanup
     });
-  }, [index]);
+
+    // Cleanup function to clear intervals on component unmount
+    return () => {
+      intervals.forEach(clearInterval);
+    };
+  }, []); // This hook will run only once when the component mounts
 
   useEffect(() => {
     const typeEffect = () => {
@@ -88,8 +101,10 @@ const Home = () => {
 
     const timeout = setTimeout(typeEffect, isDeleting ? 60 : 60);
 
+    // Cleanup timeout on component unmount
     return () => clearTimeout(timeout);
   }, [fullText, isDeleting, index]);
+
   return (
     <div className="mb-5" id="home">
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 h-[600px]">
@@ -99,9 +114,9 @@ const Home = () => {
         <div className="my-auto">
           <h1 className="text-4xl ml-0 text-left">
             Who am I and <br />
-            What I 'm great at?
+            What I'm great at?
           </h1>
-          <p className="text-left py-3 text-[18px] text-[#dedede] flex sm:flex-row  flex-col">
+          <p className="text-left py-3 text-[18px] text-[#dedede] flex sm:flex-row flex-col">
             <span>I am</span> &nbsp;{" "}
             <span className="text-[#c55648]">
               {fullText}{" "}
@@ -114,21 +129,19 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="mb-32 bg-white bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2  gap-8 py-6 px-6">
-        {data.map((item, index) => {
-          return (
-            <div key={index}>
-              <p
-                style={{ color: item.color }}
-                className={`font-extrabold text-[28px]`}
-              >
-                {item.current}
-                {item.unit}
-              </p>
-              <p className={`text-[#dedede]`}>{item.type}</p>
-            </div>
-          );
-        })}
+      <div className="mb-32 bg-white bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2 gap-8 py-6 px-6">
+        {data.map((item, index) => (
+          <div key={index}>
+            <p
+              style={{ color: item.color }}
+              className={`font-extrabold text-[28px]`}
+            >
+              {item.current}
+              {item.unit}
+            </p>
+            <p className={`text-[#dedede]`}>{item.type}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
