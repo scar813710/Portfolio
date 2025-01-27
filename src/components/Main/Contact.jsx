@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="py-6">
               <ul className="flex mx-auto w-fit gap-12">
                 <li>
-                  <a href="">
+                  <button>
                     <img
                       src="./contacts/iconmonstr-linkedin-3.svg"
                       alt="contacts"
@@ -54,10 +54,10 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="https://github.com/scar813710">
                     <img
                       src="./contacts/iconmonstr-github-3.svg"
                       alt="contacts"
@@ -68,7 +68,7 @@ const Contact = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <button>
                     <img
                       src="./contacts/iconmonstr-email-10.svg"
                       alt="contacts"
@@ -76,10 +76,10 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="">
+                  <button>
                     <img
                       src="./contacts/iconmonstr-telegram-3.svg"
                       alt="contacts"
@@ -87,10 +87,10 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="">
+                  <button>
                     <img
                       src="./contacts/iconmonstr-discord-1.svg"
                       alt="contacts"
@@ -98,7 +98,7 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

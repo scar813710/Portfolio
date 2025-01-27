@@ -39,11 +39,9 @@ const Home = () => {
     personalDatas.map((item) => ({ ...item, current: 0 })) // Initialize with current values as 0
   );
 
-  const [currentRole, setCurrentRole] = useState("");
   const [fullText, setFullText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [showCaret, setShowCaret] = useState(true);
 
   useEffect(() => {
     data.forEach((item, index) => {
@@ -92,12 +90,6 @@ const Home = () => {
 
     return () => clearTimeout(timeout);
   }, [fullText, isDeleting, index]);
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setShowCaret(!showCaret);
-  //   }, 500);
-  // }, [showCaret]);
-
   return (
     <div className="mb-5" id="home">
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 h-[600px]">
@@ -110,12 +102,15 @@ const Home = () => {
             What I 'm great at?
           </h1>
           <p className="text-left py-3 text-[18px] text-[#dedede] flex sm:flex-row  flex-col">
-            <span>I am</span> &nbsp; <span className="text-[#c55648]">{fullText} {showCaret && <span className="caret text-white">|</span>}</span>
-            
+            <span>I am</span> &nbsp;{" "}
+            <span className="text-[#c55648]">
+              {fullText}{" "}
+              <span className="caret text-white">|</span>
+            </span>
           </p>
           <p className="text-left py-3 text-[18px] text-[#dedede]">
-            I am very passionate about web development. <br />
-            I try my best in every project.
+            I am very passionate about web development. <br />I try my best in
+            every project.
           </p>
         </div>
       </div>

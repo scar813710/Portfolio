@@ -76,7 +76,7 @@ const Experience = () => {
                 <p className="text-white text-left py-5 text-[20px] border-[#ffffff81] border-b">{experience.role}</p>
                 <ul className="text-white text-left list-disc mt-4 ml-4">
                   {experience.description.map((desc, index) => (
-                    <li>{desc}</li>
+                    <li key={index}>{desc}</li>
                   ))}
                 </ul>
               </div>

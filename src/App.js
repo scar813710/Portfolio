@@ -18,7 +18,6 @@ function App() {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
       setIsScrolled(isScrolled);
-      console.log(isScrolled);
     };
 
     window.addEventListener("scroll", handleScroll);

@@ -107,7 +107,7 @@ const Projects = () => {
               <div
                 className={`${project.bg_color} hover-panel rounded-md w-full h-full absolute bottom-0 bg-opacity-70 flex flex-col justify-center items-center text-center p-4`}
               >
-                <a className="border p-2 rounded-full hover:bg-white hover:bg-opacity-55 duration-200">
+                <button className="border p-2 rounded-full hover:bg-white hover:bg-opacity-55 duration-200">
                   {" "}
                   <img
                     src="./search-icon.svg"
@@ -115,7 +115,7 @@ const Projects = () => {
                     height={25}
                     alt="icon"
                   />
-                </a>
+                </button>
               </div>
             )}
           </div>

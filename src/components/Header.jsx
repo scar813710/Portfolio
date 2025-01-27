@@ -8,7 +8,7 @@ const Header = () => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
       setIsScrolled(isScrolled);
-      
+
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,9 +27,9 @@ const Header = () => {
             : "relative bg-transparent"
         }`}
       >
-        <a href="" className="text-white font-extrabold text-[32px]">
+        <p className="text-white font-extrabold text-[32px] cursor-pointer">
           <span className="text-[#c55648]"> Rodolfo </span> Guerrero
-        </a>
+        </p>
         <ul className="flex text-white gap-4 font-normal text-[16px] ">
           <li className="cursor-pointer">
             <Link to="home" spy={true} smooth={true} duration={500}>
