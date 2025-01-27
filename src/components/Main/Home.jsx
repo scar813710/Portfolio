@@ -65,7 +65,7 @@ const Home = () => {
         }
       }, stepTime);
     });
-  }, []);
+  }, [index]);
 
   useEffect(() => {
     const typeEffect = () => {
