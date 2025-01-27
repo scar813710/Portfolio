@@ -8,6 +8,7 @@ const Header = () => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
       setIsScrolled(isScrolled);
+      
     };
 
     window.addEventListener("scroll", handleScroll);
