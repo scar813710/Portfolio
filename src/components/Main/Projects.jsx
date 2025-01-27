@@ -12,7 +12,7 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "./projects/game/hero-section.png",
+    image: "./projects/Game/hero-section.png",
     url: "",
     github: "",
     title: "Game Project",
