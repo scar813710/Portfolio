@@ -1,48 +1,89 @@
-import React from "react";
-// import map from "./public/map.svg"
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    subject: "",
+    name: "",
+    email: "",
+    description: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .send("service_m6liepl", "template_f5ska5n", formData, "j_1vJqt4M2fN0SO_J")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Message sent successfully!");
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
+        alert("Failed to send message, please try again later.");
+      });
+    console.log(formData);
+    
+  };
   return (
     <div className="relative" id="contact">
       <h2>Contact Me</h2>
       <div className="lg:grid lg:grid-cols-2">
         <div className="px-10">
-          <div className="flex w-full grid sm:grid-cols-2 grid-cols-1 gap-5 ">
-            <div className="">
-              <p className="text-[#f0f0f0] text-left py-4">Subject : </p>
+          <form onSubmit={sendEmail} className="text-white">
+            <div className="flex w-full grid sm:grid-cols-2 grid-cols-1 gap-5 ">
+              <div className="">
+                <p className="text-[#f0f0f0] text-left py-4">Subject : </p>
+                <input
+                  name="subject"
+                  id="subject"
+                  type="text"
+                  onChange={handleChange}
+                  className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full"
+                />
+              </div>
+              <div className="">
+                <p className="text-[#f0f0f0] text-left py-4">Name : </p>
+                <input
+                  name="name"
+                  id="name"
+                  type="text"
+                  onChange={handleChange}
+                  className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#f0f0f0] text-left py-4">Email : </p>
               <input
+                name="email"
+                id="email"
                 type="text"
+                onChange={handleChange}
                 className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full"
               />
             </div>
-            <div className="">
-              <p className="text-[#f0f0f0] text-left py-4">Name : </p>
-              <input
-                type="text"
+            <div>
+              <p className="text-[#f0f0f0] text-left py-4">Text : </p>
+              <textarea
+                name="description"
+                id="description"
                 className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full"
-              />
+                rows={6}
+                onChange={handleChange}
+              ></textarea>
             </div>
-          </div>
-          <div>
-            <p className="text-[#f0f0f0] text-left py-4">Email : </p>
-            <input
-              type="text"
-              className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full"
-            />
-          </div>
-          <div>
-            <p className="text-[#f0f0f0] text-left py-4">Text : </p>
-            <textarea
-              name=""
-              id=""
-              className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full"
-              rows={6}
-            ></textarea>
-          </div>
-          <div className="w-full">
-            <button className="w-full border border-white bg-white bg-opacity-0 hover:bg-opacity-30 text-white p-4 rounded-md my-8">
+            <button
+              type="submit"
+              className="w-full border border-white bg-white bg-opacity-0 hover:bg-opacity-30 text-white p-4 rounded-md my-8"
+            >
               Send
             </button>
+          </form>
+          <div className="w-full">
             <div className="py-6">
               <ul className="flex mx-auto w-fit gap-12">
                 <li>
