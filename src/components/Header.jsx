@@ -1,5 +1,37 @@
 import React, { useState, useEffect } from "react";
 import { Button, Link } from "react-scroll";
+import "./Header.css"
+
+const sections = [
+  {
+    name: "Home",
+    to: "home",
+  },
+  {
+    name: "About Me",
+    to: "about",
+  },
+  {
+    name: "Experience",
+    to: "experience",
+  },
+  {
+    name: "Project",
+    to: "project",
+  },
+  {
+    name: "Skills",
+    to: "skills",
+  },
+  {
+    name: "Testimonial",
+    to: "testimonial",
+  },
+  {
+    name: "Contact",
+    to: "contact",
+  },
+];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,8 +53,10 @@ const Header = () => {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 1024) {
         setIsMobileMenu(true);
+        setIsSidebarVisible(false);
       } else {
         setIsMobileMenu(false);
+        setIsSidebarVisible(true);
       }
     });
 
@@ -30,14 +64,6 @@ const Header = () => {
       window.removeEventListener("resize", () => {});
     };
   }, []);
-
-  useEffect(() => {
-    if (isMobileMenu) {
-      setIsSidebarVisible(true);
-    } else {
-      setIsSidebarVisible(false);
-    }
-  }, [isMobileMenu]);
 
   return (
     <div className="text-center">
@@ -52,43 +78,37 @@ const Header = () => {
           <span className="text-[#c55648] "> Rodolfo </span> &nbsp;{" "}
           <span className="hidden lg:block">Guerrero</span>
         </p>
-        {isMobileMenu && <button><img src="./hamburger-icon.svg" className="border rounded-md" width={35} height={35} alt="" /></button>}
-        <ul className={`flex text-white gap-4 font-normal text-[16px] lg:flex-row ${isMobileMenu && `hidden`}`}>
-          <li className="cursor-pointer">
-            <Link to="home" spy={true} smooth={true} duration={500}>
-              Home
-            </Link>
-          </li>
-          <li className="cursor-pointer">
-            <Link to="about" spy={true} smooth={true} duration={500}>
-              About Me
-            </Link>
-          </li>
-          <li className="cursor-pointer">
-            <Link to="experience" spy={true} smooth={true} duration={500}>
-              Experience
-            </Link>
-          </li>
-          <li className="cursor-pointer">
-            <Link to="project" spy={true} smooth={true} duration={500}>
-              Project
-            </Link>
-          </li>
-          <li className="cursor-pointer">
-            <Link to="skills" spy={true} smooth={true} duration={500}>
-              Skills
-            </Link>
-          </li>
-          <li className="cursor-pointer">
-            <Link to="testimonial" spy={true} smooth={true} duration={500}>
-              Testimonial
-            </Link>
-          </li>
-          <li className="cursor-pointer">
-            <Link to="contact" spy={true} smooth={true} duration={500}>
-              Contact
-            </Link>
-          </li>
+        {isMobileMenu && (
+          <button
+            onClick={() => {
+              setIsSidebarVisible(!isSidebarVisible);
+            }}
+          >
+            <img
+              src="./hamburger-icon.svg"
+              className="border rounded-md"
+              width={35}
+              height={35}
+              alt=""
+            />
+          </button>
+        )}
+        <ul
+          className={`${
+            !isMobileMenu &&
+            "flex text-white gap-4 font-normal text-[16px] lg:flex-row"
+          }  ${
+            isMobileMenu &&
+            "flex absolute top-[97px] gap-2 bg-white bg-opacity-30 w-[40%] pt-9 h-[100vh] right-0  flex-col items-center transition-all"
+          } ${!isSidebarVisible && "w-0 overflow-hidden"}`}
+        >
+          {sections.map((section, index) => (
+            <li className="cursor-pointer relative pb-3 w-fit">
+              <Link to={section.to} spy={true} smooth={true} duration={500} className="navs duration-300 hover:after:w-full duration-300 ">
+                {section.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>

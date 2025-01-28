@@ -1,0 +1,20 @@
+.navs:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transition: .3s;
+}
+
+.navs::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+}
