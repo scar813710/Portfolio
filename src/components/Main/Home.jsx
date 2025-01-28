@@ -106,30 +106,30 @@ const Home = () => {
   }, [fullText, isDeleting, index]);
 
   return (
-    <div className="mb-5" id="home">
-      <div className="text-white grid lg:grid-cols-2 grid-cols-1 h-[600px]">
+    <div className=" mt-10 mb-5" id="home">
+      <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
         <div className="w-full flex items-center justify-center">
-          <img src="./avatar1.jpg" alt="" className="rounded-[50%] w-[50%]" />
+          <img src="./avatar1.png" alt="" className="rounded-[100%] my-20 w-[50%] border" />
         </div>
         <div className="my-auto">
-          <h1 className="text-4xl ml-0 text-left">
+          <h1 className="text-4xl ml-0 lg:text-left mt-8 lg:mt-0">
             Who am I and <br />
             What I'm great at?
           </h1>
-          <p className="text-left py-3 text-[18px] text-[#dedede] flex sm:flex-row flex-col">
-            <span>I am</span> &nbsp;{" "}
+          <p className=" py-3 text-[18px] text-[#dedede] flex lg:justify-start justify-center">
+            <span>I am</span> &nbsp;
             <span className="text-[#c55648]">
               {fullText}{" "}
               <span className="caret text-white">|</span>
             </span>
           </p>
-          <p className="text-left py-3 text-[18px] text-[#dedede]">
+          <p className="lg:text-left py-3 text-[18px] text-[#dedede]">
             I am very passionate about web development. <br />I try my best in
             every project.
           </p>
         </div>
       </div>
-      <div className="mb-32 bg-white bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2 gap-8 py-6 px-6">
+      <div className="mb-32 mt-32 bg-white bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2 gap-8 py-6 px-6">
         {data.map((item, index) => (
           <div key={index}>
             <p

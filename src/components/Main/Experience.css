@@ -1,7 +1,7 @@
 .experience-card::after {
   content: "";
   position: absolute;
-  top: 24.5px;
+  top: 24.7px;
   background-color: rgb(255, 51, 0);
   width: 9px;
   height: 9px;
