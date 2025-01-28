@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Link } from "react-scroll";
-import "./Header.css"
+import "./Header.css";
 
 const sections = [
   {
@@ -35,8 +35,10 @@ const sections = [
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-  const [isMobileMenu, setIsMobileMenu] = useState(false);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+  const [isMobileMenu, setIsMobileMenu] = useState(
+    window.innerWidth < 1024 ? true : false
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,7 +106,13 @@ const Header = () => {
         >
           {sections.map((section, index) => (
             <li className="cursor-pointer relative pb-3 w-fit">
-              <Link to={section.to} spy={true} smooth={true} duration={500} className="navs duration-300 hover:after:w-full duration-300 ">
+              <Link
+                to={section.to}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="navs duration-300 hover:after:w-full duration-300 "
+              >
                 {section.name}
               </Link>
             </li>

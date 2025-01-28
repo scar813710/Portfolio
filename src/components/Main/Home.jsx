@@ -55,9 +55,10 @@ const Home = () => {
 
       const intervalId = setInterval(() => {
         if (currentValue < endValue) {
-          currentValue = endValue > 10000
-            ? currentValue + 101
-            : endValue > 100
+          currentValue =
+            endValue > 10000
+              ? currentValue + 101
+              : endValue > 100
               ? currentValue + 5
               : currentValue + 1;
 
@@ -105,11 +106,28 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, [fullText, isDeleting, index]);
 
+  const handleDownload = () => {
+    // URL of the file to download
+    const fileUrl =
+      "https://raw.githubusercontent.com/scar813710/resume/820e4b984bcf2699997097126f590f57906c44ee/RodolfoPeinadoGuerreroResume.pdf";
+
+    const link = document.createElement("a");
+    link.href = fileUrl; // Setting the correct URL
+    link.setAttribute("download", "RodolfoPeinadoGuerreroResume.pdf"); // Specify the filename and extension you want
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className=" mt-10 mb-5" id="home">
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
         <div className="w-full flex items-center justify-center">
-          <img src="./avatar1.png" alt="" className="rounded-[100%] my-20 w-[50%] border" />
+          <img
+            src="./avatar1.png"
+            alt=""
+            className="rounded-[100%] my-20 w-[50%] border"
+          />
         </div>
         <div className="my-auto">
           <h1 className="text-4xl ml-0 lg:text-left mt-8 lg:mt-0">
@@ -119,14 +137,27 @@ const Home = () => {
           <p className=" py-3 text-[18px] text-[#dedede] flex lg:justify-start justify-center">
             <span>I am</span> &nbsp;
             <span className="text-[#c55648]">
-              {fullText}{" "}
-              <span className="caret text-white">|</span>
+              {fullText} <span className="caret text-white">|</span>
             </span>
           </p>
           <p className="lg:text-left py-3 text-[18px] text-[#dedede]">
             I am very passionate about web development. <br />I try my best in
             every project.
           </p>
+          <div className="mx-auto lg:ml-0 w-fit">
+            <button
+              onClick={handleDownload}
+              className="mt-3 border border-white bg-white bg-opacity-0 hover:bg-opacity-30 text-white p-4 rounded-md flex gap-2 items-center duration-300"
+            >
+              Resume{" "}
+              <img
+                src="./download-icon.svg"
+                alt="icon"
+                width={15}
+                height={10}
+              />
+            </button>
+          </div>
         </div>
       </div>
       <div className="mb-32 mt-32 bg-white bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2 gap-8 py-6 px-6">

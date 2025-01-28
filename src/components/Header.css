@@ -6,7 +6,7 @@
   background-color: white;
   bottom: 0;
   left: 0;
-  transition: .3s;
+  transition: 1s;
 }
 
 .navs::after {
