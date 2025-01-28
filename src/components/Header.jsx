@@ -105,7 +105,7 @@ const Header = () => {
           } ${!isSidebarVisible && "w-0 overflow-hidden"}`}
         >
           {sections.map((section, index) => (
-            <li className="cursor-pointer relative pb-3 w-fit">
+            <li className="cursor-pointer relative pb-3 w-fit" key={index}>
               <Link
                 to={section.to}
                 spy={true}
