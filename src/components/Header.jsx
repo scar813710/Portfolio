@@ -101,8 +101,8 @@ const Header = () => {
             "flex text-white gap-4 font-normal text-[16px] lg:flex-row"
           }  ${
             isMobileMenu &&
-            "flex absolute top-[97px] gap-2 bg-white bg-opacity-30 w-[40%] pt-9 h-[100vh] right-0  flex-col items-center transition-all"
-          } ${!isSidebarVisible && "w-0 overflow-hidden"}`}
+            "flex absolute top-[97px] gap-2 bg-white bg-opacity-30 pt-9 h-[100vh] right-0  flex-col items-center transition-all"
+          } ${!isSidebarVisible ? "w-0 overflow-hidden" : "w-[40%]"}`}
         >
           {sections.map((section, index) => (
             <li className="cursor-pointer relative pb-3 w-fit" key={index}>
