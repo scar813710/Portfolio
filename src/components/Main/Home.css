@@ -1,34 +1,61 @@
 .animate {
-    animation: incrementNumber 0.5s linear forwards;
+  animation: incrementNumber 0.5s linear forwards;
+}
+
+@keyframes incrementNumber {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  @keyframes incrementNumber {
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+}
+
+.animate-number {
+  animation: incrementNumber2 1.5s linear forwards;
+}
+
+@keyframes incrementNumber2 {
+  0% {
+    opacity: 0;
+    transform: scale(0);
   }
-  
-  .animate-number {
-    animation: incrementNumber2 1.5s linear forwards;
+  50% {
+    opacity: 0.5;
+    transform: scale(1);
   }
-  
-  @keyframes incrementNumber2 {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    50% {
-      opacity: 0.5;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .digit {
-    font-size: 28px;
-    font-weight: bold;
+}
+
+.digit {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.avatar > * {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 2%;
+}
+
+.avatar {
+  transform: translateZ(0);
+  margin-bottom: 100px;
+  box-shadow: 0 3px 0 #87cefa,
+    0 -3px 0 #ff69b475, 3px 0 0 #87cefa,
+    -3px 0 0 #ff69b4, 3px -3px 0 #b83647,
+    -3px 3px 0 #ff324ef5, 3px 3px 0 #ff2b2b9a,
+    -3px -3px 0 #87cefa;
+  animation: rotateThis 3s linear infinite;
+}
+
+@keyframes rotateThis {
+  from {
+    transform: rotate(0deg) scale(1);
   }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}

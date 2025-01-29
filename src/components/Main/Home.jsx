@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Home.css";
 
 const personalDatas = [
   {
@@ -122,12 +123,13 @@ const Home = () => {
   return (
     <div className=" mt-10 mb-5" id="home">
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-center relative">
           <img
             src="./avatar1.png"
-            alt=""
-            className="rounded-[100%] my-20 w-[50%] border"
+            alt="avatar"
+            className=" my-20 w-[50%] rounded-full"
           />
+          <div className="absolute avatar top-20 w-[50%] aspect-square rounded-full"></div>
         </div>
         <div className="my-auto">
           <h1 className="text-4xl ml-0 lg:text-left mt-8 lg:mt-0">
