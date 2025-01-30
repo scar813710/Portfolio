@@ -37,7 +37,6 @@ const experiences = [
     role: "Bachelor's in Computer Science ",
     duration: "Apr 2009 - Oct 2013",
     description: [
- 
     ],
   },
 ];
