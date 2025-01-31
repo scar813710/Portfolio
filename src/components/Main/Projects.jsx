@@ -3,7 +3,7 @@ import "./Project.css";
 
 const projects = [
   {
-    image: "./projects/digital-marketing-business-website/hero-section.gif",
+    image: "https://github.com/scar813710/Image-gallary/blob/master/portfolio/projects/digital-marketing-business-website/hero-section.gif?raw=true",
     url: "",
     github: "",
     title: "Digital Marketing Business Website",
@@ -21,7 +21,7 @@ const projects = [
     bg_color: "bg-blue-400",
   },
   {
-    image: "./projects/Web-developement-website/hero-section.jpg",
+    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Web-developement-website/hero-section.webp",
     url: "",
     github: "",
     title: "Web Development Website",
@@ -30,7 +30,7 @@ const projects = [
     bg_color: "bg-purple-800",
   },
   {
-    image: "./projects/cake-shop/hero-section.png",
+    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/cake-shop/hero-section.webp",
     url: "",
     github: "",
     title: "Cake Shop",
@@ -39,7 +39,7 @@ const projects = [
     bg_color: "bg-pink-300",
   },
   {
-    image: "./projects/Real-estate/hero-section.png",
+    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Real-estate/hero-section.webp",
     url: "",
     github: "",
     title: "Real Estate Agency",
@@ -48,7 +48,7 @@ const projects = [
     bg_color: "bg-orange-800",
   },
   {
-    image: "./projects/Automatic-medical-billing/hero-section.jpg",
+    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Automatic-medical-billing/hero-section.webp",
     url: "",
     github: "",
     title: "Real Estate Agency",
@@ -57,7 +57,7 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "./projects/project-management-system/hero-section.jpg",
+    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/project-management-system/hero-section.webp",
     url: "",
     github: "",
     title: "Web Development Website",
@@ -66,7 +66,7 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "./projects/Agency-website/hero-section.jpg",
+    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Agency-website/hero-section.webp",
     url: "",
     github: "",
     title: "Web Development Website",
