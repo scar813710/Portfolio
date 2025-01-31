@@ -12,7 +12,7 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "./projects/Game/hero-section.png",
+    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Game/hero-section.webp",
     url: "",
     github: "",
     title: "Game Project",
