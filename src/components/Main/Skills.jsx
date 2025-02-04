@@ -84,7 +84,7 @@ const skills = [
     name: "Gin",
     image: "./skills/gin-seeklogo.svg",
   },
-  {
+  { 
     name: "Figma",
     image: "./skills/Figma-Dark.084e0600.svg",
   },
