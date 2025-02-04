@@ -77,6 +77,10 @@ const skills = [
     image: "./skills/laravel-1-logo-svgrepo-com.svg",
   },
   {
+    name: "Wordpress",
+    image: "./skills/wordpress-svgrepo-com.svg",
+  },
+  {
     name: "Django",
     image: "./skills/djangoproject-svgrepo-com.svg",
   },
@@ -84,7 +88,7 @@ const skills = [
     name: "Gin",
     image: "./skills/gin-seeklogo.svg",
   },
-  { 
+  {
     name: "Figma",
     image: "./skills/Figma-Dark.084e0600.svg",
   },
