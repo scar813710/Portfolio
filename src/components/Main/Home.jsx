@@ -123,7 +123,7 @@ const Home = () => {
   return (
     <div className=" mt-10 mb-5" id="home">
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
-        <div className="w-full flex items-center justify-center relative">
+        <div className="w-full flex items-center justify-center relative z-10">
           <img
             src="./avatar1.png"
             alt="avatar"
