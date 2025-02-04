@@ -21,8 +21,32 @@ const skills = [
     image: "./skills/React-Dark.3c7899b7.svg",
   },
   {
+    name: "Python",
+    image: "./skills/python-svgrepo-com.svg",
+  },
+  {
+    name: "Go",
+    image: "./skills/golang-svgrepo-com.svg",
+  },
+  {
     name: "PHP",
     image: "./skills/php-svgrepo-com.svg",
+  },
+  {
+    name: "Bootstrap",
+    image: "./skills/Bootstrap.41de6993.svg",
+  },
+  {
+    name: "Tailwind",
+    image: "./skills/TailwindCSS-Dark.b2dbe1dd.svg",
+  },
+  {
+    name: "Material UI",
+    image: "./skills/MaterialUI-Dark.277e057b.svg",
+  },
+  {
+    name: "Sass",
+    image: "./skills/Sass.6476a60f.svg",
   },
   {
     name: "Next.js",
@@ -53,22 +77,14 @@ const skills = [
     image: "./skills/laravel-1-logo-svgrepo-com.svg",
   },
   {
-    name: "Sass",
-    image: "./skills/Sass.6476a60f.svg",
+    name: "Django",
+    image: "./skills/djangoproject-svgrepo-com.svg",
   },
   {
-    name: "Bootstrap",
-    image: "./skills/Bootstrap.41de6993.svg",
+    name: "Gin",
+    image: "./skills/gin-seeklogo.svg",
   },
-  {
-    name: "Tailwind",
-    image: "./skills/TailwindCSS-Dark.b2dbe1dd.svg",
-  },
-  {
-    name: "Material UI",
-    image: "./skills/MaterialUI-Dark.277e057b.svg",
-  },
-  {
+  { 
     name: "Figma",
     image: "./skills/Figma-Dark.084e0600.svg",
   },
