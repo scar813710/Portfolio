@@ -126,7 +126,7 @@ const Home = () => {
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
         <div className="w-full flex items-center justify-center relative z-10">
           <img
-            src="./avatar1.png"
+            src="https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/avatar-no-background.webp"
             alt="avatar"
             className=" my-20 w-[50%] rounded-full"
           />
