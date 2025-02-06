@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Project.css";
+import Loader from "../Common/Loader"; // Assuming you have this Loader component
 
 const projects = [
   {
@@ -51,8 +52,8 @@ const projects = [
     image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Automatic-medical-billing/hero-section.webp",
     url: "",
     github: "",
-    title: "Real Estate Agency",
-    description: "A real estate agency website to showcase properties.",
+    title: "Automatic Medical Billing",
+    description: "An application for medical billing management.",
     skills: ["React", "Node.js", "MongoDB"],
     bg_color: "bg-purple-400",
   },
@@ -60,8 +61,8 @@ const projects = [
     image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/project-management-system/hero-section.webp",
     url: "",
     github: "",
-    title: "Web Development Website",
-    description: "A portfolio site showcasing web development skills.",
+    title: "Project Management System",
+    description: "An application for managing projects effectively.",
     skills: ["HTML", "CSS", "JavaScript"],
     bg_color: "bg-purple-400",
   },
@@ -69,14 +70,16 @@ const projects = [
     image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Agency-website/hero-section.webp",
     url: "",
     github: "",
-    title: "Web Development Website",
-    description: "A portfolio site showcasing web development skills.",
+    title: "Agency Website",
+    description: "A website for showcasing agency services.",
     skills: ["HTML", "CSS", "JavaScript"],
     bg_color: "bg-red-800",
   },
 ];
 
 const Projects = () => {
+  const [numberOfProjects, setNumberOfProjects] = useState(4);
+  const [loading, setLoading] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -87,11 +90,21 @@ const Projects = () => {
     setHoveredIndex(null);
   };
 
+  const handleReadMoreClick = () => {
+    if (numberOfProjects < projects.length) {
+      setLoading(true);
+      setTimeout(() => {
+        setNumberOfProjects((prev) => Math.min(prev + 2, projects.length));
+        setLoading(false);
+      }, 2000); // 2 seconds delay
+    }
+  };
+
   return (
     <div id="project">
       <h2 className="text-right">Projects</h2>
       <div className="grid lg:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
+        {projects.slice(0, numberOfProjects).map((project, index) => (
           <div
             key={index}
             className="hover:shadow-2xl duration-300 shadow-black rounded-md overflow-hidden relative cursor-pointer"
@@ -108,7 +121,6 @@ const Projects = () => {
                 className={`${project.bg_color} hover-panel rounded-md w-full h-full absolute bottom-0 bg-opacity-70 flex flex-col justify-center items-center text-center p-4`}
               >
                 <button className="border p-2 rounded-full hover:bg-white hover:bg-opacity-55 duration-200">
-                  {" "}
                   <img
                     src="./search-icon.svg"
                     width={25}
@@ -121,15 +133,15 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <button className="mt-7 rounded-[10%] duration-300 p-4 border text-white bg-white bg-opacity-15 hover:bg-opacity-35">
-        Read More
+      <button
+        className="mt-7 rounded-[10%] duration-300 p-4 border text-white bg-white bg-opacity-15 hover:bg-opacity-35"
+        onClick={handleReadMoreClick}
+        disabled={loading}
+      >
+        {loading ? <Loader /> : numberOfProjects < projects.length ? "Read More" : "No More Projects"}
       </button>
     </div>
   );
 };
 
 export default Projects;
-
-// ${
-//   index % 2 !== 0 ? "bg-red-400" : "bg-blue-400"
-// }
