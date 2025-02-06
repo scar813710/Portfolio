@@ -34,7 +34,7 @@ const About = () => {
                 <span className="w-32 font-bold text-left inline-block">
                   Phone No:
                 </span>
-                <p className="italic">+57 3053725583</p>
+                <p className="italic">+1 2029708048</p>
               </li>
               <li className="flex flex-col esm:flex-row  py-2">
                 <span className="w-32 font-bold text-left inline-block">
