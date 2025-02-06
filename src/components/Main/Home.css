@@ -43,11 +43,11 @@
 .avatar {
   transform: translateZ(0);
   margin-bottom: 100px;
-  box-shadow: 0 3px 0 #87cefa,
-    0 -3px 0 #ff69b475, 3px 0 0 #87cefa,
-    -3px 0 0 #ff69b4, 3px -3px 0 #b83647,
-    -3px 3px 0 #ff324ef5, 3px 3px 0 #ff2b2b9a,
-    -3px -3px 0 #87cefa;
+  box-shadow: 
+    1px 1px 3px #ff0411,
+    -1px -1px 2px #3654ff,
+    1px -1px 1px #e5ff00,
+    -2px -2px 1px #e4ff48;
   animation: rotateThis 3s linear infinite;
 }
 
