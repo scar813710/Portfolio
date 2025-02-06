@@ -13,12 +13,12 @@ const skills = [
     image: "./skills/JavaScript.20f34c02.svg",
   },
   {
-    name: "Javasript",
+    name: "TS",
     image: "./skills/TypeScript.3fb93039.svg",
   },
   {
-    name: "Typescript",
-    image: "./skills/React-Dark.3c7899b7.svg",
+    name: "PHP",
+    image: "./skills/php-svgrepo-com.svg",
   },
   {
     name: "Python",
@@ -27,10 +27,6 @@ const skills = [
   {
     name: "Go",
     image: "./skills/golang-svgrepo-com.svg",
-  },
-  {
-    name: "PHP",
-    image: "./skills/php-svgrepo-com.svg",
   },
   {
     name: "Bootstrap",
@@ -47,6 +43,10 @@ const skills = [
   {
     name: "Sass",
     image: "./skills/Sass.6476a60f.svg",
+  },
+  {
+    name: "React",
+    image: "./skills/React-Dark.3c7899b7.svg",
   },
   {
     name: "Next.js",

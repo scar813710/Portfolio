@@ -28,3 +28,68 @@
 .timeline {
   background: linear-gradient(to bottom, #ff5252, yellow, #ffffff);
 }
+
+.btn-border-slide {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-border-slide:before,
+.btn-border-slide:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 4px; /* replace with desired $borderWidth */
+  width: 100%;
+  background-color: #000; /* replace with desired $color */
+}
+
+.btn-border-slide:before {
+  top: 0;
+}
+
+.btn-border-slide:after {
+  bottom: 0;
+}
+
+.btn-border-slide:hover > * {
+  transform: translate3d(0, 0, 0);
+}
+
+.btn-border-slide > * {
+  position: relative;
+  display: block; /* Ensure children are block-level so we can position their pseudo-elements */
+}
+
+.btn-border-slide > *:before,
+.btn-border-slide > *:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 4px; /* replace with desired $borderWidth */
+  background-color: #f00; /* replace with desired $hoverColor */
+}
+
+.btn-border-slide > *:before {
+  left: 0;
+  transform: translate3d(0, 105%, 0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* replace 0.3s with desired $time */
+}
+
+.btn-border-slide > *:after {
+  right: 0;
+  transform: translate3d(0, -105%, 0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* replace 0.3s with desired $time */
+}
+
+.btn-border-slide:hover > *:before {
+  transform: translate3d(-105%, 0, 0);
+}
+
+.btn-border-slide:hover > *:after {
+  transform: translate3d(105%, 0, 0);
+}

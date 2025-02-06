@@ -36,8 +36,7 @@ const experiences = [
     company: "Jiangnan University",
     role: "Bachelor's in Computer Science ",
     duration: "Apr 2009 - Oct 2013",
-    description: [
-    ],
+    description: [],
   },
 ];
 
@@ -51,13 +50,15 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <div
               key={index}
-              className={`${
+              className={` ${
                 index !== 0 && "lg:-mt-[150px]"
               } mb-6 w-[90%] pt-5 relative experience-card lg:after:left-[50%] lg:before:left-[50%] after:-left-[5.5%] before:-left-[5.5%]`}
             >
               <div
-                className={`relative text-black p-6 ${
-                  index % 2 !== 1 ? "content-left" : "content-right lg:ml-[55%] "
+                className={` relative text-black p-6 ${
+                  index % 2 !== 1
+                    ? "content-left"
+                    : "content-right lg:ml-[55%] "
                 }  border-white border rounded-md hover:bg-white hover:bg-opacity-30 duration-300 lg:w-[45%] `}
               >
                 <h3 className="font-bold text-[#ff7979] text-left text-[24px]">
@@ -66,7 +67,9 @@ const Experience = () => {
                 <p className="text-sm italic text-[#c4c4c4cb] text-left">
                   {experience.duration}
                 </p>
-                <p className="text-white text-left py-5 text-[20px] border-[#ffffff81] border-b">{experience.role}</p>
+                <p className="text-white text-left py-5 text-[20px] border-[#ffffff81] border-b">
+                  {experience.role}
+                </p>
                 <ul className="text-white text-left list-disc mt-4 ml-4 hidden esm:block">
                   {experience.description.map((desc, index) => (
                     <li key={index}>{desc}</li>
