@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 0;
+      const isScrolled = window.scrollY > 40;
       setIsScrolled(isScrolled);
     };
 
@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-[1440px] mx-auto overflow-hidden">
       <div className="App my-10 border rounded-[30px] bg-white bg-opacity-20 sm:mx-10 lg:mb-0 mx-4">
         <Header />
         <div className={`md:px-14 px-7 ${isScrolled && ""}`}>
