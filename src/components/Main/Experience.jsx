@@ -46,7 +46,7 @@ const Experience = () => {
       <h2 className="ml-0">Experience & Education</h2>
       <div className="relative">
         <div className="timeline w-[2px] absolute lg:left-[50%] left-0 h-full"></div>
-        <div className="mx-auto flex flex-col items-center mt-32 ">
+        <div className="mx-auto flex flex-col items-center mt-15 ">
           {experiences.map((experience, index) => (
             <div
               key={index}
