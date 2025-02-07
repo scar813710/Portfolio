@@ -72,13 +72,14 @@ const Header = () => {
       <nav
         className={`flex justify-between items-center py-6 lg:px-14 px-7 text-white border-b border-[#ffffff54] transition duration-500 ${
           isScrolled
-            ? "fixed top-0 left-0 right-0 bg-white bg-opacity-30  shadow-md 2xl:mx-auto sm:mx-10 mx-4 max-w-[1358px] z-50"
+            ? "fixed top-0 left-0 right-0 bg-black bg-opacity-70  shadow-md 2xl:mx-auto sm:mx-10 mx-4 max-w-[1358px] z-50"
             : "relative bg-transparent"
         }`}
       >
         <p className="text-white font-extrabold text-[32px] cursor-pointer flex">
-          <span className="text-[#c55648] "> Rodolfo </span> &nbsp;{" "}
-          <span className="hidden lg:block">Guerrero</span>
+          <img src="./favicon.svg" alt="Logo" width={40} height={40} />
+          {/* <span className="text-[#c55648] "> Rodolfo </span> &nbsp;{" "}
+          <span className="hidden lg:block">Guerrero</span> */}
         </p>
         {isMobileMenu && (
           <button
@@ -105,7 +106,7 @@ const Header = () => {
           } ${(!isSidebarVisible && isMobileMenu) ? "w-0 overflow-hidden" : "w-[40%]"}`}
         >
           {sections.map((section, index) => (
-            <li className="cursor-pointer relative pb-3 w-fit" key={index}>
+            <li className="cursor-pointer relative w-fit" key={index}>
               <Link
                 to={section.to}
                 spy={true}

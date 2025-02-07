@@ -78,16 +78,17 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full border border-white bg-white bg-opacity-0 hover:bg-opacity-30 text-white p-4 rounded-md my-8"
+              className="w-full border border-white bg-white bg-opacity-0 hover:bg-opacity-30 text-white p-4 rounded-md my-8 flex justify-center items-center gap-5"
             >
-              Send
+              <img src="./contacts/send-message-icon.svg" alt="" width={25} height={25} />
+              Send Message
             </button>
           </form>
           <div className="w-full">
             <div className="py-6">
               <ul className="flex mx-auto w-fit gap-12">
                 <li>
-                  <button>
+                  <a href="https://www.linkedin.com/in/rodolfo-guerrero-peinado">
                     <img
                       src="./contacts/iconmonstr-linkedin-3.svg"
                       alt="contacts"
@@ -95,7 +96,7 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </button>
+                  </a>
                 </li>
                 <li>
                   <a href="https://github.com/scar813710">
@@ -109,7 +110,7 @@ const Contact = () => {
                   </a>
                 </li>
                 <li>
-                  <button>
+                  <a href="mailto:rodolfguerr@gmail.com">
                     <img
                       src="./contacts/iconmonstr-email-10.svg"
                       alt="contacts"
@@ -117,10 +118,10 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button>
+                  <a href="https://t.me/chainshifu">
                     <img
                       src="./contacts/iconmonstr-telegram-3.svg"
                       alt="contacts"
@@ -128,10 +129,10 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button>
+                  <a href="https://discord.gg/1279986793160376425">
                     <img
                       src="./contacts/iconmonstr-discord-1.svg"
                       alt="contacts"
@@ -139,7 +140,7 @@ const Contact = () => {
                       width={35}
                       height={35}
                     />
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
