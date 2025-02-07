@@ -29,7 +29,6 @@ const personalDatas = [
 ];
 
 const myRole = [
-  "Rodolfo Guerrero",
   "Full Stack Developer",
   "Frontend Developer",
   "Backend Developer",
@@ -134,11 +133,9 @@ const Home = () => {
         </div>
         <div className="my-auto">
           <h1 className="text-4xl ml-0 lg:text-left mt-8 lg:mt-0">
-            Who am I and <br />
-            What I'm great at?
+            I am Rodolfo Guerrero
           </h1>
           <p className=" py-3 text-[18px] text-[#dedede] flex lg:justify-start justify-center">
-            <span>I am</span> &nbsp;
             <span className="text-[#c55648]">
               {fullText} <span className="caret text-white">|</span>
             </span>
