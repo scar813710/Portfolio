@@ -125,7 +125,7 @@ const Home = () => {
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
         <div className="w-full flex items-center justify-center relative z-10">
           <img
-            src="https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/avatar-no-background.webp"
+            src="./avatar.jpg"
             alt="avatar"
             className=" my-20 w-[50%] rounded-full"
           />
@@ -133,7 +133,7 @@ const Home = () => {
         </div>
         <div className="my-auto">
           <h1 className="text-4xl ml-0 lg:text-left mt-8 lg:mt-0">
-            I am Rodolfo Guerrero
+            <span>I am</span>  <span className="font-bold">Rodolfo Guerrero</span>
           </h1>
           <p className=" py-3 text-[18px] text-[#dedede] flex lg:justify-start justify-center">
             <span className="text-[#c55648]">
