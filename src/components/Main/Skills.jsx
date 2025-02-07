@@ -139,7 +139,7 @@ const Skills = () => {
             key={index}
             className="m-2 w-fit flex items-center gap-2 p-2 border border-[#dbdbdb8a] rounded-lg bg-white bg-opacity-15 hover:bg-opacity-40 duration-300 cursor-pointer"
           >
-            <img src={skill.image} alt={skill.name} width={35} height={25} />
+            <img src={skill.image} alt={skill.name} height={25} width={35}  style={{height:"35px"}}/>
             <p className="text-white w-fit">{skill.name}</p>
           </div>
         ))}
