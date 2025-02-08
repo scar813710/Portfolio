@@ -7,9 +7,9 @@ const experiences = [
     role: "Senior Full-Stack Developer",
     duration: "Jun 2022 - Present",
     description: [
-      "Developed responsive user interfaces using React.js, Vue.js, and Angular.js, ensuring an optimal user experience.",
-      "Implemented server-side rendering with Next.js and Nuxt.js, improving SEO and application performance by over 30%",
-      "Built high-performing static websites with Gatsby.js and developed interactive applications using Svelte.js, resulting in a 25% increase in user engagement.",
+      "Developed a high-performance ERP system using React.js and Golang (Gin) , enabling businesses to automate workflows, manage inventory, and track financials, increasing operational efficiency by 40%",
+      "Led the migration of a monolithic PHP (Laravel) system to a microservices-based Golang architecture, improving scalability and reducing system downtime by 50%",
+      "Built a real-time order tracking system for a logistics company using FastAPI, WebSockets, and Redis, allowing customers to monitor shipments with sub-second latency",
     ],
   },
   {
@@ -17,9 +17,9 @@ const experiences = [
     role: "Full Stack Developer",
     duration: "Jan 2019 - Apr 2022",
     description: [
-      "Assisted in the creation of modern web applications with React.js and Vue.js, participating in the full development lifecycle from concept to deployment.",
-      "Supported the backend team by integrating RESTful APIs and writing server-side code in Node.js, enabling dynamic data interactions between the user interface and server.",
-      "Gained practical experience with database management using MongoDB and MySQL, assisting in data modeling and queries that improved application performance.",
+      "Designed and developed a Learning Management System (LMS) using Django and React.js, automating course enrollment, progress tracking, and certification issuance, increasing student engagement by 30%",
+      "Created a financial dashboard for a fintech startup using Golang (Echo) and Vue.js, allowing users to track transactions, analyze spending trends, and receive AI-powered financial recommendations",
+      "Developed a multi-vendor e-commerce platform using Node.js (Nest.js) and PostgreSQL, enabling third-party sellers to list products, process orders, and manage inventory seamlessly",
     ],
   },
   {
@@ -29,6 +29,7 @@ const experiences = [
     description: [
       "Utilized HTML, CSS, and JavaScript to build responsive and pixel-perfect layouts, ensuring compatibility across various devices and browsers.",
       "Employed Bootstrap and Material UI for rapid development of user-friendly and accessible components, reducing development time by 35%.",
+      "Converted PSDs to HTML for back-end developers to implement using the CMS",
       "Developed dynamic and interactive web applications using React.js and Vue.js, resulting in a 40% increase in user engagement and interaction rates.",
     ],
   },

@@ -133,16 +133,17 @@ const Home = () => {
         </div>
         <div className="my-auto">
           <h1 className="text-4xl ml-0 lg:text-left mt-8 lg:mt-0">
-            <span>I am</span>  <span className="font-bold">Rodolfo Guerrero</span>
+            <span>I am</span>{" "}
+            <span className="font-bold">Rodolfo Guerrero</span>
           </h1>
           <p className=" py-3 text-[18px] text-[#dedede] flex lg:justify-start justify-center">
             <span className="text-[#c55648]">
               {fullText} <span className="caret text-white">|</span>
             </span>
           </p>
-          <p className="lg:text-left py-3 text-[18px] text-[#dedede]">
-            I am very passionate about web development. <br />I try my best in
-            every project.
+          <p className="lg:text-left text-justify py-3 text-[18px] text-[#dedede]">
+            Building and Engaging dynamic web applications that captivate <br />{" "}
+            with a blend of creativity and technical expertise.
           </p>
           <div className="mx-auto lg:ml-0 w-fit">
             <button

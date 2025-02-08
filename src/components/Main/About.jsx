@@ -9,7 +9,13 @@ const About = () => {
         <div className="text-[#dedede] py-6">
           <div className="text-justify pb-10 border-b border-[#e6e6e693] w-full ">
             <p className="indent-4 w-full">
-              Full Stack Developer with over 10 years of experience, 
+              Full Stack Developer with over 10 years of experience,
+              specializing in JavaScript frameworks such as Node.js, React.js,
+              and Vue.js.
+            </p>
+            <br />
+            <p className="indent-4 w-full">
+              Full Stack Developer with over 10 years of experience,
               specializing in JavaScript frameworks such as Node.js, React.js,
               and Vue.js.
             </p>
@@ -34,25 +40,37 @@ const About = () => {
                 <span className="w-32 font-bold text-left inline-block">
                   Phone No:
                 </span>
-                <p className="italic">+1 2029708048</p>
+                <a className="italic hover:underline" href="tel:+12029708048">
+                  +1 (202) 970 8048
+                </a>
               </li>
               <li className="flex flex-col esm:flex-row  py-2">
                 <span className="w-32 font-bold text-left inline-block">
                   Email:
                 </span>
-                <p className="italic">rodolfguerr@gmail.com</p>
+                <a
+                  className="italic hover:underline"
+                  href="mailto:rodolfguerr@gmail.com"
+                >
+                  rodolfguerr@gmail.com
+                </a>
               </li>
               <li className="flex flex-col esm:flex-row  py-2 w-full">
                 <span className="w-32 font-bold text-left inline-block">
                   Address:
                 </span>
-                <p className="italic">Calle 23# 68-89 Medellín</p>
+                <a
+                  className="italic hover:underline "
+                  href="https://maps.app.goo.gl/wXzfYMT7ZsAoBeC68"
+                >
+                  Calle 23# 68-89 Medellín
+                </a>
               </li>
               <li className="flex flex-col esm:flex-row  py-2 w-full">
                 <span className="w-32 font-bold text-left inline-block">
                   Looking for:
                 </span>
-                <p className="italic">Contract Full-time job</p>
+                <p className="italic hover:underline">Contract Full-time job</p>
               </li>
             </ul>
           </div>

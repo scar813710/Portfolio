@@ -70,14 +70,14 @@ const Header = () => {
   return (
     <div className="text-center">
       <nav
-        className={`flex justify-between items-center py-6 lg:px-14 px-7 text-white border-b border-[#ffffff54] transition duration-500 ${
+        className={`flex justify-between items-center py-3 lg:px-14 px-7 text-white border-b border-[#ffffff54] transition duration-500 ${
           isScrolled
             ? "fixed top-0 left-0 right-0 bg-black bg-opacity-70  shadow-md 2xl:mx-auto sm:mx-10 mx-4 max-w-[1358px] z-50"
             : "relative bg-transparent"
         }`}
       >
         <p className="text-white font-extrabold text-[32px] cursor-pointer flex">
-          <img src="./favicon.svg" alt="Logo" width={40} height={40} />
+          <img src={!isScrolled ? "./white-logo.png" : "./logo.png"} alt="Logo" width={200} height={30} />
           {/* <span className="text-[#c55648] "> Rodolfo </span> &nbsp;{" "}
           <span className="hidden lg:block">Guerrero</span> */}
         </p>
@@ -102,7 +102,7 @@ const Header = () => {
             "flex text-white gap-4 font-normal text-[16px] lg:flex-row w-fit"
           }  ${
             isMobileMenu &&
-            "flex absolute top-[97px] gap-2 bg-white bg-opacity-30 pt-9 h-[100vh] right-0  flex-col items-center transition-all z-50"
+            "flex absolute top-[89px] gap-2 bg-black bg-opacity-30 pt-9 h-[100vh] right-0  flex-col items-center transition-all z-50"
           } ${(!isSidebarVisible && isMobileMenu) ? "w-0 overflow-hidden" : "w-[40%]"}`}
         >
           {sections.map((section, index) => (
