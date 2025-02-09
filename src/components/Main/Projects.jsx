@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Project.css";
 import Loader from "../Common/Loader"; // Assuming you have this Loader component
+import Modal from "../Common/Modal";
 
 const projects = [
   {
-    image: "https://github.com/scar813710/Image-gallary/blob/master/portfolio/projects/digital-marketing-business-website/hero-section.gif?raw=true",
+    image:
+      "https://github.com/scar813710/Image-gallary/blob/master/portfolio/projects/digital-marketing-business-website/hero-section.gif?raw=true",
     url: "",
     github: "",
     title: "Digital Marketing Business Website",
@@ -13,7 +15,8 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Game/hero-section.webp",
+    image:
+      "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Game/hero-section.webp",
     url: "",
     github: "",
     title: "Game Project",
@@ -22,7 +25,8 @@ const projects = [
     bg_color: "bg-blue-400",
   },
   {
-    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Web-developement-website/hero-section.webp",
+    image:
+      "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Web-developement-website/hero-section.webp",
     url: "",
     github: "",
     title: "Web Development Website",
@@ -31,7 +35,8 @@ const projects = [
     bg_color: "bg-purple-800",
   },
   {
-    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/cake-shop/hero-section.webp",
+    image:
+      "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/cake-shop/hero-section.webp",
     url: "",
     github: "",
     title: "Cake Shop",
@@ -40,7 +45,8 @@ const projects = [
     bg_color: "bg-pink-300",
   },
   {
-    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Real-estate/hero-section.webp",
+    image:
+      "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Real-estate/hero-section.webp",
     url: "",
     github: "",
     title: "Real Estate Agency",
@@ -49,7 +55,8 @@ const projects = [
     bg_color: "bg-orange-800",
   },
   {
-    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Automatic-medical-billing/hero-section.webp",
+    image:
+      "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Automatic-medical-billing/hero-section.webp",
     url: "",
     github: "",
     title: "Automatic Medical Billing",
@@ -58,7 +65,8 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/project-management-system/hero-section.webp",
+    image:
+      "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/project-management-system/hero-section.webp",
     url: "",
     github: "",
     title: "Project Management System",
@@ -67,7 +75,8 @@ const projects = [
     bg_color: "bg-purple-400",
   },
   {
-    image: "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Agency-website/hero-section.webp",
+    image:
+      "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Agency-website/hero-section.webp",
     url: "",
     github: "",
     title: "Agency Website",
@@ -81,6 +90,8 @@ const Projects = () => {
   const [numberOfProjects, setNumberOfProjects] = useState(4);
   const [loading, setLoading] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -96,8 +107,18 @@ const Projects = () => {
       setTimeout(() => {
         setNumberOfProjects((prev) => Math.min(prev + 2, projects.length));
         setLoading(false);
-      }, 2000); // 2 seconds delay
+      }, 2000);
     }
+  };
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
   };
 
   return (
@@ -120,7 +141,10 @@ const Projects = () => {
               <div
                 className={`${project.bg_color} hover-panel rounded-md w-full h-full absolute bottom-0 bg-opacity-70 flex flex-col justify-center items-center text-center p-4`}
               >
-                <button className="border p-2 rounded-full hover:bg-white hover:bg-opacity-55 duration-200">
+                <button
+                  className="border p-2 rounded-full hover:bg-white hover:bg-opacity-55 duration-200"
+                  onClick={() => openModal(project)}
+                >
                   <img
                     src="./search-icon.svg"
                     width={25}
@@ -138,8 +162,19 @@ const Projects = () => {
         onClick={handleReadMoreClick}
         disabled={loading}
       >
-        {loading ? <Loader /> : numberOfProjects < projects.length ? "Read More" : "No More Projects"}
+        {loading ? (
+          <Loader />
+        ) : numberOfProjects < projects.length ? (
+          "Read More"
+        ) : (
+          "No More Projects"
+        )}
       </button>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        project={selectedProject}
+      />
     </div>
   );
 };
