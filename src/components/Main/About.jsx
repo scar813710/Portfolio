@@ -15,12 +15,6 @@ const About = () => {
             </p>
             <br />
             <p className="indent-4 w-full">
-              Full Stack Developer with over 10 years of experience,
-              specializing in JavaScript frameworks such as Node.js, React.js,
-              and Vue.js.
-            </p>
-            <br />
-            <p className="indent-4 w-full">
               Having a proven track record of delivering high-quality, scalable
               web applications while emphasizing clean code and user experience.
             </p>
