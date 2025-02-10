@@ -44,7 +44,7 @@ const experiences = [
 const Experience = () => {
   return (
     <div className="my-10 mx-auto pb-6 " id="experience">
-      <h2 className="ml-0">Experience & Education</h2>
+      <h2 className="">Experience & Education</h2>
       <div className="relative">
         <div className="timeline w-[2px] absolute lg:left-[50%] left-0 h-full"></div>
         <div className="mx-auto flex flex-col items-center mt-15 ">

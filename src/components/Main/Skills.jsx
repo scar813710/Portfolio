@@ -128,8 +128,8 @@ const skills = [
 const Skills = () => {
   return (
     <div id="skills">
-      <h2 className="ml-0 relative">Skills & Tools</h2>
-      <p className="pl-6 text-left text-[#daff53e1] text-[18px]">
+      <h2 className="relative">Skills & Tools</h2>
+      <p className="text-center text-[#daff53e1] text-[18px]">
         Passionately diving deep into tech crafting perfect products with
         finesse - NOT just listing.
       </p>
