@@ -110,7 +110,7 @@ const Home = () => {
   const handleDownload = () => {
     // URL of the file to download
     const fileUrl =
-      "https://raw.githubusercontent.com/scar813710/resume/441a614ade661b83ae7a4cafc2e0c0566ad20bc4/Full%20stack.pdf";
+      "./resume/RodolfoPeinadoGuerreroResume.pdf";
 
     const link = document.createElement("a");
     link.href = fileUrl; // Setting the correct URL
