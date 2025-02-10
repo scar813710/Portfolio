@@ -87,7 +87,7 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [numberOfProjects, setNumberOfProjects] = useState(4);
+  const [numberOfProjects, setNumberOfProjects] = useState(8);
   const [loading, setLoading] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -105,7 +105,7 @@ const Projects = () => {
     if (numberOfProjects < projects.length) {
       setLoading(true);
       setTimeout(() => {
-        setNumberOfProjects((prev) => Math.min(prev + 2, projects.length));
+        setNumberOfProjects((prev) => Math.min(prev + 4, projects.length));
         setLoading(false);
       }, 2000);
     }
@@ -157,19 +157,17 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <button
-        className="mt-7 rounded-[10%] duration-300 p-4 border text-white bg-white bg-opacity-15 hover:bg-opacity-35"
-        onClick={handleReadMoreClick}
-        disabled={loading}
-      >
-        {loading ? (
-          <Loader />
-        ) : numberOfProjects < projects.length ? (
-          "Read More"
-        ) : (
-          "No More Projects"
-        )}
-      </button>
+      {numberOfProjects < projects.length ? (
+        <button
+          className="mt-7 rounded-[10%] duration-300 p-4 border text-white bg-white bg-opacity-15 hover:bg-opacity-35"
+          onClick={handleReadMoreClick}
+          disabled={loading}
+        >
+          {loading ? <Loader /> : "Read More"}
+        </button>
+      ) : (
+        ""
+      )}
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
