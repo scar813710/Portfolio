@@ -44,9 +44,9 @@
   transform: translateZ(0);
   margin-bottom: 100px;
   box-shadow: 
-    1px 1px 3px #ff0411,
-    -1px -1px 2px #3654ff,
-    1px -1px 1px #e5ff00,
+    2px 2px 3px #ff0411,
+    -2px -2px 2px #3654ff,
+    2px -2px 1px #e5ff00,
     -2px -2px 1px #e4ff48;
   animation: rotateThis 3s linear infinite;
 }
