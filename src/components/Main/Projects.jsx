@@ -54,7 +54,7 @@ const projects = [
     skills: ["React", "Node.js", "MongoDB"],
     bg_color: "bg-orange-800",
   },
-  { 
+  {
     image:
       "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Automatic-medical-billing/hero-section.webp",
     url: "",
