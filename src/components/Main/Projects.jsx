@@ -11,7 +11,7 @@ const projects = [
     github: "",
     title: "Digital Marketing Business Website",
     description: "A business website for digital marketing solutions.",
-    skills: ["React", "CSS", "JavaScript"],
+    skills: ["Angular", "CSS", "JavaScript"],
     bg_color: "bg-purple-400",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     github: "",
     title: "Web Development Website",
     description: "A portfolio site showcasing web development skills.",
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["HTML", "CSS", "JavaScript", "Angular"],
     bg_color: "bg-purple-800",
   },
   {
@@ -54,7 +54,7 @@ const projects = [
     skills: ["React", "Node.js", "MongoDB"],
     bg_color: "bg-orange-800",
   },
-  {
+  { 
     image:
       "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Automatic-medical-billing/hero-section.webp",
     url: "",
@@ -71,7 +71,7 @@ const projects = [
     github: "",
     title: "Project Management System",
     description: "An application for managing projects effectively.",
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["Angular", "CSS", "JavaScript"],
     bg_color: "bg-purple-400",
   },
   {
