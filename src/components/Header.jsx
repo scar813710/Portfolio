@@ -77,9 +77,12 @@ const Header = () => {
         }`}
       >
         <p className="text-white font-extrabold text-[32px] cursor-pointer flex">
-          <img src={!isScrolled ? "./white-logo.png" : "./logo.png"} alt="Logo" width={200} height={30} />
-          {/* <span className="text-[#c55648] "> Rodolfo </span> &nbsp;{" "}
-          <span className="hidden lg:block">Guerrero</span> */}
+          <img
+            src={!isScrolled ? "./white-logo.png" : "./logo.png"}
+            alt="Logo"
+            width={200}
+            height={30}
+          />
         </p>
         {isMobileMenu && (
           <button
@@ -103,7 +106,11 @@ const Header = () => {
           }  ${
             isMobileMenu &&
             "flex absolute top-[89px] gap-2 bg-black bg-opacity-30 pt-9 h-[100vh] right-0  flex-col items-center transition-all z-50"
-          } ${(!isSidebarVisible && isMobileMenu) ? "w-0 overflow-hidden" : "w-[40%]"}`}
+          } ${
+            !isSidebarVisible && isMobileMenu
+              ? "w-0 overflow-hidden"
+              : "w-[40%]"
+          }`}
         >
           {sections.map((section, index) => (
             <li className="cursor-pointer relative w-fit" key={index}>
