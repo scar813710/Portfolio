@@ -32,8 +32,8 @@ const Contact = () => {
     <div className="relative" id="contact">
       <h2>Contact Me</h2>
       <div className="lg:grid lg:grid-cols-2">
-        <div className="px-10">
-          <form onSubmit={sendEmail} className="text-white">
+        <div className="px-10 z-10">
+          <form onSubmit={sendEmail} className="text-white  z-10">
             <div className="flex w-full grid sm:grid-cols-2 grid-cols-1 gap-5 ">
               <div className="">
                 <p className="text-[#f0f0f0] text-left py-4">Subject : </p>
@@ -52,7 +52,7 @@ const Contact = () => {
                   id="name"
                   type="text"
                   onChange={handleChange}
-                  className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full"
+                  className="bg-white bg-opacity-15 hover:bg-opacity-35 duration-200 rounded-md p-4 w-full "
                 />
               </div>
             </div>
@@ -146,8 +146,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className=" absolute top-[300px] right-0 -z-10 lg:w-[50%]">
-          <img src="./map.svg" alt="map" className="mr-0" />
+        <div className=" absolute top-[300px] right-0 lg:w-[50%] -z-10 lg:z-0">
+          <img src="./map.svg" alt="map" className="mr-0 " />
         </div>
       </div>
     </div>

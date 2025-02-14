@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import useDarkMode from "../hooks/useDarkMode"; // Assuming useDarkMode.js is in the parent directory
 
-const ColorPicker = () => {
+const ColorPicker = ({setThemeColor}) => {
   const [isDarkMode, toggleDarkMode] = useDarkMode();
   const [pickThemeDisable, togglePickThemeDisable] = useState(false);
-  const [themeColor, setThemeColor] = useState("red");
+
 
   return (
     <div>
       <div
-        className={`fixed top-[150px] ${
+        className={`z-40 fixed top-[150px] ${
           pickThemeDisable ? `-right-3` : `-right-[170px]`
         } w-[170px] bg-white bg-opacity-30 border-white rounded-md p-3 pr-6 dark:bg-gray-800 dark:bg-opacity-50 dark:border-gray-600 transition-all`}
       >
