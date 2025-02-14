@@ -60,7 +60,7 @@ const Experience = () => {
                   index % 2 !== 1
                     ? "content-left"
                     : "content-right lg:ml-[55%] "
-                }  border-white border rounded-md hover:bg-white hover:bg-opacity-30 duration-300 lg:w-[45%] `}
+                }  border-white border rounded-md hover:bg-white hover:dark:bg-black hover:dark:bg-opacity-40 hover:bg-opacity-30 duration-300 lg:w-[45%] `}
               >
                 <h3 className="font-bold text-[#ff7979] text-left text-[24px]">
                   {experience.company}

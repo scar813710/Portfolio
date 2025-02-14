@@ -35,7 +35,7 @@ const Testimonial = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white bg-opacity-15 p-6 rounded-md hover:shadow-[10px_10px_8px_#00000066] duration-300"
+            className="bg-white bg-opacity-15 p-6 rounded-md hover:shadow-[10px_10px_8px_#00000066] dark:hover:shadow-[4px_4px_2px_#ffffff66] duration-300"
           >
             <div className="flex xl:justify-around justify-center gap-7 items-center">
               <img

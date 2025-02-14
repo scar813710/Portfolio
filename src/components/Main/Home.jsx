@@ -161,7 +161,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mb-32 mt-32 bg-white bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2 gap-8 py-6 px-6">
+      <div className="mb-32 mt-32 bg-white dark:bg-black dark:bg-opacity-40 bg-opacity-30 rounded-md text lg:flex lg:justify-around grid sm:grid-cols-2 gap-8 py-6 px-6">
         {data.map((item, index) => (
           <div key={index}>
             <p

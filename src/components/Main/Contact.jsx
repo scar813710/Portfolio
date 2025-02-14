@@ -147,7 +147,7 @@ const Contact = () => {
           </div>
         </div>
         <div className=" absolute top-[300px] right-0 -z-10 lg:w-[50%]">
-          <img src="/map.svg" alt="map" className="mr-0 opacity-60" />
+          <img src="./map.svg" alt="map" className="mr-0" />
         </div>
       </div>
     </div>
