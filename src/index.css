@@ -11,7 +11,6 @@ body {
   font-family: "Poppins",serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to right, #5f2e2e, #0d418f);
 }
 
 code {
