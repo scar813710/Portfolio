@@ -2,14 +2,6 @@
 import { useState, useEffect } from "react";
 
 function useDarkMode() {
-  // const [isDarkMode, setDarkMode] = useState(() => {
-  //   // Check local storage first
-  //   if (typeof window !== 'undefined') { // Check if window is defined (for SSR)
-  //     return localStorage.getItem('theme') === 'dark';
-  //   }
-  //   return false; // Default to light mode if no preference is found (or during SSR)
-  // });
-
   const [isDarkMode, setDarkMode] = useState(true);
   useEffect(() => {
     const html = window.document.documentElement; // Get the root <html> element
