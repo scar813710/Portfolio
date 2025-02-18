@@ -105,8 +105,8 @@ const projects = [
   {
     image:
       "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Agency-website/hero-section.webp",
-    url: "",
-    github: "",
+    url: " ",
+    github: " ",
     title: "Digital Marketing Website",
     description: ["", "", ""],
     skills: ["HTML", "CSS", "JavaScript"],
