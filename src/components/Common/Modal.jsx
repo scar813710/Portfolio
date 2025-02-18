@@ -19,10 +19,10 @@ const Modal = ({ isOpen, onClose, project }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-auto mb-4 rounded"
+          className="w-full h-auto mb-8 rounded"
         />
         <ul className="mb-2">{project.description.map((item, index) => (
-          <li className="text-left" key={index}> - {item}</li>
+          <li className="text-left my-3" key={index}> - {item}</li>
         ))}</ul>
         <p className="mb-4 text-left">
           <strong>Skills:</strong> {project.skills.join(", ")}
