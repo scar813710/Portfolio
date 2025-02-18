@@ -36,11 +36,6 @@ function App() {
   ]
 
   return (
-    // <div className="bg-[linear-gradient(to_right,_#5f2e2e,_#0d418f)]">
-    // <div className="bg-[linear-gradient(to_right,_#0f5e13,_#945900)]">
-    // <div className="bg-[linear-gradient(to_right,_#4b0e53,_#18108d)]">
-    // <div className="bg-[linear-gradient(to_right,_#18108d,_#6b1212)]">
-    // <div className={`bg-[${colors[themeColor]}]`}>
     <div className={`
     ${ themeColor === 'red' &&`bg-[linear-gradient(to_right,_#5f2e2e,_#0d418f)]`}
     ${ themeColor === 'purple' &&`bg-[linear-gradient(to_right,_#4b0e53,_#18108d)]`}

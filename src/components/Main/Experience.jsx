@@ -3,34 +3,55 @@ import "./Experience.css";
 
 const experiences = [
   {
-    company: "DevCrew I/O",
+    company: "Flatworld Solutions",
     role: "Senior Full-Stack Developer",
-    duration: "Jun 2022 - Present",
+    duration: "Mar 2020 - Present",
+    location: "Princeton, United State",
     description: [
-      "Developed a high-performance ERP system using React.js and Golang (Gin) , enabling businesses to automate workflows, manage inventory, and track financials, increasing operational efficiency by 40%",
-      "Led the migration of a monolithic PHP (Laravel) system to a microservices-based Golang architecture, improving scalability and reducing system downtime by 50%",
-      "Built a real-time order tracking system for a logistics company using FastAPI, WebSockets, and Redis, allowing customers to monitor shipments with sub-second latency",
+      "Developed and maintained multiple web applications, ensuring high performance, scalability, and reliability.",
+      "Optimized application performance for speed and efficiency, resulting in improved user engagement and conversion rates.",
+      "Implemented state management libraries to manage application data and user interactions, improving overall application stability.",
+      "Participated in code reviews to ensure code quality and share knowledge with team members, promoting a culture of continuous learning and improvement.",
+      "Debugged and troubleshot issues across the entire application stack, resolving complex technical problems and improving overall system reliability.",
     ],
   },
   {
-    company: "DOOD",
+    company: "DevCrew I/O",
     role: "Full Stack Developer",
-    duration: "Jan 2019 - Apr 2022",
+    duration: "Apr 2019 - Jan 2020",
+    location: "Singapore, Singapore",
     description: [
-      "Designed and developed a Learning Management System (LMS) using Django and React.js, automating course enrollment, progress tracking, and certification issuance, increasing student engagement by 30%",
-      "Created a financial dashboard for a fintech startup using Golang (Echo) and Vue.js, allowing users to track transactions, analyze spending trends, and receive AI-powered financial recommendations",
-      "Developed a multi-vendor e-commerce platform using Node.js (Nest.js) and PostgreSQL, enabling third-party sellers to list products, process orders, and manage inventory seamlessly",
+      "Rapidly prototyped and delivered working solutions within short deadlines, demonstrating agility and adaptability in a fast-paced environment.",
+      "Contributed to smaller projects or specific components of larger projects, honing skills in focused areas of web development.",
+      "Quickly learned and adapted to new technologies or project requirements, displaying a strong ability to absorb and apply new information.",
+      "Implemented authentication and authorization mechanisms to secure web applications, ensuring the protection of sensitive user data.",
+      "Deployed and managed applications on cloud platforms, ensuring high availability and scalability.",
+      "Worked with message queues for asynchronous task processing, improving application performance and responsiveness.",
     ],
   },
   {
-    company: "West Road South",
+    company: "Appnovation Technologies",
+    role: "Full Stack Developer",
+    duration: "Apr 2016 - Feb 2019",
+    location: "Hong Kong, Hong Kong",
+    description: [
+      "Contributed to large-scale web applications, working on complex projects that required collaboration and coordination with multiple teams.",
+      "Worked with Content Management Systems (CMS) such as Drupal, gaining experience with enterprise-level content management.",
+      "Participated in agile development methodologies, collaborating in a team environment and adapting to changing project requirements.",
+      "Collaborated with designers to implement responsive design principles, ensuring a consistent user experience across devices and screen sizes.",
+      "Troubleshot and resolved complex technical issues, improving overall system reliability and stability.",
+    ],
+  },
+  {
+    company: "South Road West",
     role: "Frontend Developer",
     duration: "Feb 2014 - Dec 2018",
+    location: "Hong Kong, Hong Kong",
     description: [
-      "Utilized HTML, CSS, and JavaScript to build responsive and pixel-perfect layouts, ensuring compatibility across various devices and browsers.",
-      "Employed Bootstrap and Material UI for rapid development of user-friendly and accessible components, reducing development time by 35%.",
-      "Converted PSDs to HTML for back-end developers to implement using the CMS",
-      "Developed dynamic and interactive web applications using React.js and Vue.js, resulting in a 40% increase in user engagement and interaction rates.",
+      "Contributed to small-scale web applications, gaining experience with website development and maintenance.",
+      "Maintained and troubleshot existing web applications, ensuring high availability and resolving technical issues quickly.",
+      "Implemented basic security measures to protect against common web vulnerabilities, ensuring the security and integrity of user data.",
+      "Worked with version control systems to manage code changes and collaborate with team members, promoting a culture of transparency and accountability.",
     ],
   },
   {
@@ -67,6 +88,9 @@ const Experience = () => {
                 </h3>
                 <p className="text-sm italic text-[#c4c4c4cb] text-left">
                   {experience.duration}
+                </p>
+                <p className="text-[14px] italic text-[#c4c4c4cb] text-left my-2">
+                  {experience.location}
                 </p>
                 <p className="text-white text-left py-5 text-[20px] border-[#ffffff81] border-b">
                   {experience.role}
