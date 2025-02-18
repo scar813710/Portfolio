@@ -105,11 +105,15 @@ const projects = [
   {
     image:
       "https://raw.githubusercontent.com/scar813710/Image-gallary/refs/heads/master/portfolio/projects/Agency-website/hero-section.webp",
-    url: " ",
+    url: "",
     github: " ",
     title: "Digital Marketing Website",
-    description: ["", "", ""],
-    skills: ["HTML", "CSS", "JavaScript"],
+    description: [
+      "Designed and developed a visually stunning digital marketing website utilizing Webflow for its responsive and customizable frontend, coupled with ReactJS for dynamic functionality and Express.js for robust backend logic.",
+      "Leveraged MongoDB for scalable and efficient data storage, and integrated the site with Amazon Web Services (AWS) for secure cloud hosting and content delivery.",
+      "This project demonstrates mastery in modern web technologies, UI/UX design, and cloud infrastructure, delivering a seamless online experience for digital marketing efforts.",
+    ],
+    skills: ["Webflow", "ReactJS", "Express", "MongoDB", "AWS"],
     bg_color: "bg-red-800",
   },
 ];
