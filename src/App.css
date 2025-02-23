@@ -40,10 +40,6 @@
   text-decoration: none;
  }
 
-h2:hover {
-  cursor: pointer;
-}
-
 h2:hover::after {
   content: "";
   position: absolute;

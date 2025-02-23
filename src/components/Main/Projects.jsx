@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Project.css";
 import Loader from "../Common/Loader"; // Assuming you have this Loader component
 import Modal from "../Common/Modal";
