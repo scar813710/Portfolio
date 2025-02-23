@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Link } from "react-scroll";
+import { Link } from "react-scroll";
 import "./Header.css";
 
 const sections = [

@@ -11,6 +11,7 @@ body {
   font-family: "Poppins",serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
 }
 
 code {
@@ -45,4 +46,8 @@ h2 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #f35e08, #0404ff);
+}
+
+button, h2, a, input, textarea {
+  cursor: none;
 }
