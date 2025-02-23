@@ -103,25 +103,23 @@ const Home = () => {
 
     const timeout = setTimeout(typeEffect, isDeleting ? 60 : 60);
 
-    // Cleanup timeout on component unmount
     return () => clearTimeout(timeout);
   }, [fullText, isDeleting, index]);
 
   const handleDownload = () => {
-    // URL of the file to download
     const fileUrl =
       "./resume/RodolfoPeinadoGuerreroResume.pdf";
 
     const link = document.createElement("a");
-    link.href = fileUrl; // Setting the correct URL
-    link.setAttribute("download", "RodolfoPeinadoGuerreroResume.pdf"); // Specify the filename and extension you want
+    link.href = fileUrl;
+    link.setAttribute("download", "RodolfoPeinadoGuerreroResume.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <div className=" mt-10 mb-5" id="home">
+    <div className={`mt-10 mb-5`} id="home">
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
         <div className="w-full flex items-center justify-center relative z-10">
           <img

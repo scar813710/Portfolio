@@ -53,20 +53,23 @@ function App() {
     }
     `}
     >
-      <div className="max-w-[1440px] mx-auto overflow-hidden">
+      <div className="max-w-[1440px] mx-auto overflow-hidden ">
         <div className="App my-10 border rounded-[30px] bg-white  dark:bg-black dark:bg-opacity-40 bg-opacity-20 sm:mx-10 lg:mb-0 mx-4">
           <CustomCursor
             innerCursorRef={innerCursorRef}
             outerCursorRef={outerCursorRef}
           />
           <Header />
-          <div className={`md:px-14 px-7 ${isScrolled && ""}`}>
-            <Home />
-            <About />
-            <Experience />
-            <Projects />
-            <Skills />
-            <Testimonial />
+          <div className={`${isScrolled && ""}  `}>
+
+            <div className="md:px-14 px-7 bg-[url('./grid.png')]">
+              <Home />
+              <About />
+              <Experience />
+              <Projects />
+              <Skills />
+              <Testimonial />
+            </div>
           </div>
           <Contact />
           <Footer />
