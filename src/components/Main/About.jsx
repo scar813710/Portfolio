@@ -3,7 +3,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="my-10" id="about">
+    <div className="my-10 " id="about">
       <h2 className="ml-0 text-left mb-7">About me</h2>
       <div className="grid lg:grid-cols-2 relative">
         <div className="text-[#dedede] py-6">
