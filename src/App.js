@@ -21,7 +21,7 @@ function App() {
   useCustomCursor(innerCursorRef, outerCursorRef);
 
   const [isScrolled, setIsScrolled] = useState(false);
-  const [themeColor, setThemeColor] = useState("red");
+  const [themeColor, setThemeColor] = useState("purple");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +40,8 @@ function App() {
     <div
       className={`
     ${
-      themeColor === "red" && `bg-[linear-gradient(to_right,_#790000,_#241ab6e5)]`
+      themeColor === "red" &&
+      `bg-[linear-gradient(to_right,_#531010,_#241ab6e5)]`
     }
     ${
       themeColor === "purple" &&
@@ -48,18 +49,18 @@ function App() {
     }
     ${
       themeColor === "blue" &&
-      `bg-[linear-gradient(to_right,_#18108d,_#6b1212)]`
+      `bg-[linear-gradient(to_right,_#18108d,_#0d4119)]`
     }
     ${
       themeColor === "green" &&
-      `bg-[linear-gradient(to_right,_#0f5e13,_#945900)]`
+      `bg-[linear-gradient(to_right,_#146427,_#794500)]`
     }
      ") `}
     >
       <div className="bg-[url('./grid.png')]">
         <AnimatedBackground />
-        <div className="max-w-[1440px] mx-auto overflow-hidden text-[#241ab6e5]">
-          <div className="App my-10 border rounded-[30px] bg-white  dark:bg-black dark:bg-opacity-40 bg-opacity-20 sm:mx-10 lg:mb-0 mx-4">
+        <div className="max-w-[1440px] mx-auto overflow-hidden text-[#531010]">
+          <div className="App my-10 border rounded-[30px] bg-white  dark:bg-black dark:bg-opacity-40 bg-opacity-10 sm:mx-10 lg:mb-0 mx-4">
             <CustomCursor
               innerCursorRef={innerCursorRef}
               outerCursorRef={outerCursorRef}
