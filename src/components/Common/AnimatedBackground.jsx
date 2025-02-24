@@ -3,7 +3,7 @@ import "./AnimatedBackground.css"; // Import the CSS file
 
 // Function to generate random values for animation properties
 const AnimatedBackground = () => {
-  const particleNum = 50;
+  const particleNum = 30;
 
   useEffect(() => {
     const container = document.querySelector(".bgcontainer");

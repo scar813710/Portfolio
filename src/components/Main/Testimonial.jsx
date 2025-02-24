@@ -31,7 +31,7 @@ const Testimonial = () => {
   return (
     <div className="" id="testimonial">
       <h2 className="text-left">Testimonial</h2>
-      <div className="grid xl:grid-cols-3 text-white gap-6">
+      <div className="grid xl:grid-cols-3 text-white gap-6 relative">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}

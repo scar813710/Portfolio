@@ -15,7 +15,7 @@ const ColorPicker = ({setThemeColor}) => {
       >
         <div className="relative">
           <button
-            className="absolute w-6 h-8 text-white -left-[36px] flex justify-center items-center bg-white bg-opacity-30 dark:bg-gray-800 dark:bg-opacity-50 overflow-hidden"
+            className="absolute w-8 h-10 text-white -left-[43px] flex justify-center items-center bg-white  dark:bg-gray-900 dark:bg-opacity-50 overflow-hidden"
             onClick={() => {
               togglePickThemeDisable(!pickThemeDisable);
               console.log(pickThemeDisable);
