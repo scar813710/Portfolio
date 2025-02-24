@@ -146,7 +146,7 @@ const Home = () => {
           <div className="mx-auto lg:ml-0 w-fit">
             <button
               onClick={handleDownload}
-              className="mt-3 border border-white bg-white bg-opacity-0 hover:bg-opacity-30 text-white p-4 rounded-md flex gap-2 items-center duration-300"
+              className="mt-3 border border-white bg-white bg-opacity-0 hover:bg-opacity-30 text-white p-4 rounded-md flex gap-2 items-center duration-300 z-10"
             >
               Resume{" "}
               <img
