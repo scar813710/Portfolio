@@ -129,7 +129,7 @@ const Home = () => {
           />
           <div className="absolute avatar top-20 w-[50%] aspect-square rounded-full"></div>
         </div>
-        <div className="my-auto">
+        <div className="my-auto relative">
           <h1 className="text-4xl ml-0 lg:text-left mt-8 lg:mt-0">
             <span>I am</span>{" "}
             <span className="font-bold">Rodolfo Guerrero</span>

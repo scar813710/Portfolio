@@ -40,7 +40,7 @@ function App() {
     <div
       className={`
     ${
-      themeColor === "red" && `bg-[linear-gradient(to_right,_#5f2e2e,_#0d418f)]`
+      themeColor === "red" && `bg-[linear-gradient(to_right,_#790000,_#241ab6e5)]`
     }
     ${
       themeColor === "purple" &&
@@ -58,7 +58,7 @@ function App() {
     >
       <div className="bg-[url('./grid.png')]">
         <AnimatedBackground />
-        <div className="max-w-[1440px] mx-auto overflow-hidden ">
+        <div className="max-w-[1440px] mx-auto overflow-hidden text-[#241ab6e5]">
           <div className="App my-10 border rounded-[30px] bg-white  dark:bg-black dark:bg-opacity-40 bg-opacity-20 sm:mx-10 lg:mb-0 mx-4">
             <CustomCursor
               innerCursorRef={innerCursorRef}

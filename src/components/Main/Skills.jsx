@@ -133,7 +133,7 @@ const Skills = () => {
         Passionately diving deep into tech crafting perfect products with
         finesse - NOT just listing.
       </p>
-      <div className="md:pl-6 py-6  flex flex-wrap">
+      <div className="md:pl-6 py-6  flex flex-wrap relative">
         {skills.map((skill, index) => (
           <div
             key={index}
