@@ -11,11 +11,11 @@ const ColorPicker = ({setThemeColor}) => {
       <div
         className={`z-40 fixed top-[150px] ${
           pickThemeDisable ? `-right-3` : `-right-[170px]`
-        } w-[170px] bg-white bg-opacity-30 border-white rounded-md p-3 pr-6 dark:bg-gray-800 dark:bg-opacity-50 dark:border-gray-600 transition-all`}
+        } w-[170px] bg-white bg-opacity-30 border-white rounded-md p-3 pr-6 dark:bg-gray-900 dark:bg-opacity-50 dark:border-gray-600 transition-all`}
       >
         <div className="relative">
           <button
-            className="absolute w-8 h-10 text-white -left-[43px] flex justify-center items-center bg-white  dark:bg-gray-900 dark:bg-opacity-50 overflow-hidden"
+            className="absolute w-8 h-10 text-white -left-[44px] flex justify-center items-center bg-white bg-opacity-30  dark:bg-gray-900 dark:bg-opacity-50 overflow-hidden"
             onClick={() => {
               togglePickThemeDisable(!pickThemeDisable);
               console.log(pickThemeDisable);
