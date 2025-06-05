@@ -107,8 +107,7 @@ const Home = () => {
   }, [fullText, isDeleting, index]);
 
   const handleDownload = () => {
-    const fileUrl =
-      "./resume/RodolfoPeinadoGuerreroResume.pdf";
+    const fileUrl = "./resume/RodolfoPeinadoGuerreroResume.pdf";
 
     const link = document.createElement("a");
     link.href = fileUrl;
@@ -123,7 +122,7 @@ const Home = () => {
       <div className="text-white grid lg:grid-cols-2 grid-cols-1 ">
         <div className="w-full flex items-center justify-center relative z-10">
           <img
-            src="./avatar.jpg"
+            src="./profile.jpg"
             alt="avatar"
             className=" my-20 w-[50%] rounded-full"
           />
