@@ -32,7 +32,6 @@ const myRole = [
   "Full Stack Developer",
   "Frontend Developer",
   "Backend Developer",
-  "Lead Developer",
 ];
 
 const Home = () => {
@@ -80,7 +79,7 @@ const Home = () => {
     return () => {
       intervals.forEach(clearInterval);
     };
-  }, []); // This hook will run only once when the component mounts
+  }, [data]); // This hook will run only once when the component mounts
 
   useEffect(() => {
     const typeEffect = () => {

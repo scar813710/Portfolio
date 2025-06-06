@@ -1,4 +1,4 @@
-import "./App.css";
+import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Main/Home";
 import About from "./components/Main/About";
@@ -9,11 +9,12 @@ import Testimonial from "./components/Main/Testimonial";
 import Contact from "./components/Main/Contact";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/Common/ScrollToTopButton";
-import { useEffect, useRef, useState } from "react";
 import ColorPicker from "./components/Common/ColorPicker";
 import useCustomCursor from "./components/hooks/useCustomCursor";
 import CustomCursor from "./components/Common/CustomCursor";
 import AnimatedBackground from "./components/Common/AnimatedBackground";
+
+import "./App.css";
 
 function App() {
   const innerCursorRef = useRef(null);
